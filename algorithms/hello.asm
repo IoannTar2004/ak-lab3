@@ -24,7 +24,7 @@ _start:
     print
     load '!'
     print
-    load *0
+    load 0
     print
 
     halt

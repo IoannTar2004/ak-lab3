@@ -1,0 +1,2 @@
+[{"index": 0, "opcode": "load", "arg": "*2"},
+ {"index": 1, "opcode": "halt"}]
