@@ -44,13 +44,13 @@ def translator(code):
     return instructions
 
 
-if __name__ == '__main__':
-    with open('./algorithms/test.asm') as f:
+def tr():
+    with open('../algorithms/test.asm') as f:
         code = f.readlines()
     instructions = translator(code)
 
     buf = []
     for instr in instructions:
         buf.append(json.dumps(instr))
-    with open("./out.txt", "w") as f:
+    with open("out.txt", "w") as f:
         f.write("[" + ",\n ".join(buf) + "]")

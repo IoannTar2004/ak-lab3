@@ -1,0 +1,2 @@
+[{"index": 0, "opcode": "dec"},
+ {"index": 1, "opcode": "halt"}]
