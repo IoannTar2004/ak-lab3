@@ -13,15 +13,5 @@ class Signal:
 class Bus:
     ACC = "acc"
     MEM = "mem"
+    BUF = "buf"
     STACK = "stack"
-
-
-class ALU:
-
-    ADD = 0
-    SUB = 1
-    MUL = 2
-    DIV = 3
-    REM = 4
-    INC = 5
-    DEC = 6

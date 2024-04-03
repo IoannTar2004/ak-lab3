@@ -1,3 +1,3 @@
 _start:
-    load *2
+    add *4
     halt

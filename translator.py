@@ -10,7 +10,7 @@ def labels_insert(labels, instructions):
 
 
 def labels_parse(labels, line, index):
-    split = re.split("\s*:\s*", line)
+    split = re.split("\\s*:\\s*", line)
     labels[split[0]] = index
     split.pop(0)
 
@@ -27,7 +27,7 @@ def translator(code):
         if ":" in line:
             labels_parse(labels, line, index)
             continue
-        split = re.split("(?<!')\s+(?!=')", line)
+        split = re.split("(?<!')\\s+(?!=')", line)
         instr = {"index": index, "opcode": split[0]}
 
         if len(split) > 1:
