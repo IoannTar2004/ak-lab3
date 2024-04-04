@@ -19,7 +19,6 @@ class Opcode:
 
     CALL = "call"
     RET = "ret"
-    IRET = "iret"
     DI = "DI"
     EI = "EI"
 

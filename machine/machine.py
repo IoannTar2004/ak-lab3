@@ -1,7 +1,6 @@
 from isa import Opcode
 from machine_constants import *
-import translator
-import json
+import decoder
 
 arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.REM, Opcode.INC, Opcode.DEC, Opcode.CMP]
 
@@ -62,14 +61,14 @@ class DataPath:
 
     def get_bus_value(self, bus):
         match bus:
-            case Bus.ACC: return self.acc
-            case Bus.BUF: return self.buf_reg
-            case Bus.STACK: return self.stack_pointer
-            case Bus.MEM: return self.memory_bus
+            case Valves.ACC: return self.acc
+            case Valves.BUF: return self.buf_reg
+            case Valves.STACK: return self.stack_pointer
+            case Valves.MEM: return self.memory_bus
 
-    def alu_working(self, operation=Opcode.ADD, valves=[Bus.ACC]):
+    def alu_working(self, operation=Opcode.ADD, valves=[Valves.ACC]):
         self.data_bus = self.get_bus_value(valves[0])
-        if Bus.ACC in valves:
+        if Valves.ACC in valves:
             self.flags = {"z": self.acc == 0, "n": self.data_bus < 0}
         if operation in [Opcode.INC, Opcode.DEC]:
             self.data_bus = self.execute_alu_operation(operation)
@@ -88,7 +87,6 @@ class ControlUnit:
 
     _tick = 0
 
-
     def __init__(self, instructions, data_path):
         self.ip = instructions[0]["_start"]
         del instructions[0]
@@ -103,14 +101,21 @@ class ControlUnit:
     def execute(self):
         while self.instructions[self.ip]["opcode"] != Opcode.HALT:
             instr = self.instructions[self.ip]
-            decoder = Decoder(self, instr["opcode"], instr["arg"] if "arg" in instr else 0)
-            if decoder.opcode in [Opcode.LOAD, Opcode.STORE]:
-                decoder.decode_memory_commands()
-            elif decoder.opcode in arithmetic_operations:
-                decoder.decode_arithmetic_commands()
-            elif decoder.opcode in [Opcode.JMP, Opcode.JGE]:
-                if decoder.decode_flow_commands():
+            decode = decoder.Decoder(self, instr["opcode"], instr["arg"] if "arg" in instr else 0)
+            if decode.opcode in [Opcode.LOAD, Opcode.STORE]:
+                decode.decode_memory_commands()
+            elif decode.opcode in arithmetic_operations:
+                decode.decode_arithmetic_commands()
+            elif decode.opcode in [Opcode.JMP, Opcode.JGE]:
+                if decode.decode_flow_commands():
                     continue
+            elif decode.opcode in [Opcode.CALL, Opcode.RET, Opcode.IRET]:
+                decode.decode_subprogram_commands()
+                if decode.opcode != Opcode.RET:
+                    continue
+            elif decode.opcode in [Opcode.EI, Opcode.DI]:
+                decode.decode_interrupt_commands()
+
             self.signal_latch_ip()
 
     def signal_latch_ip(self, signal=Signal.NEXT_IP, arg=0):
@@ -119,76 +124,3 @@ class ControlUnit:
             case Signal.JMP_ARG: self.ip = arg
             case Signal.INTERRUPT: self.ip = self.int_address
             case Signal.DATA_IP: self.ip = self.data_path.data_bus
-
-class Decoder:
-    cu: ControlUnit = None
-
-    opcode = None
-
-    arg = None
-
-    def __init__(self, control_unit, opcode, arg):
-        self.cu = control_unit
-        self.opcode = opcode
-        self.arg = arg
-
-    def decode_memory_commands(self):
-        dp = cu.data_path
-        if self.opcode == Opcode.LOAD:
-            if isinstance(self.arg, int) or self.arg[0] != '*':
-                dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
-            else:
-                dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(self.arg[1:]))
-                dp.memory_manager(Signal.READ)
-                dp.alu_working(valves=[Bus.MEM])
-                dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
-        elif self.opcode == Opcode.STORE:
-            dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(self.arg[1:]))
-            dp.alu_working()
-            dp.memory_manager(Signal.WRITE)
-        cu.tick()
-
-    def decode_arithmetic_commands(self):
-        dp = cu.data_path
-        if self.opcode not in [Opcode.INC, Opcode.DEC]:
-            if isinstance(self.arg, int):
-                dp.alu_working()
-                dp.signal_latch_regs(Signal.BUF_LATCH)
-                cu.tick()
-                dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
-                cu.tick()
-                if self.opcode not in [Opcode.SUB, Opcode.DIV, Opcode.REM, Opcode.CMP]:
-                    dp.alu_working(self.opcode, [Bus.ACC, Bus.BUF])
-                else:
-                    dp.alu_working(self.opcode, [Bus.BUF, Bus.ACC])
-                dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
-            else:
-                dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(self.arg[1:]))
-                dp.memory_manager(Signal.READ)
-                dp.alu_working(self.opcode, [Bus.ACC, Bus.MEM])
-                dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
-        else:
-            dp.alu_working(self.opcode)
-            dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
-        cu.tick()
-
-    def decode_flow_commands(self):
-        dp = cu.data_path
-        match self.opcode:
-            case Opcode.JMP:
-                cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
-                return True
-            case Opcode.JGE:
-                if dp.flags["n"] != 1:
-                    cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
-                    return True
-        return False
-
-
-if __name__ == '__main__':
-    translator.tr()
-    with open("out.txt", "r", encoding="utf-8") as f:
-        code = json.load(f)
-    dp = DataPath(None, 10)
-    cu = ControlUnit(code, dp)
-    cu.execute()

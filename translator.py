@@ -42,7 +42,7 @@ def translator(code):
             try:
                 instr["arg"] = int(split[1])
             except ValueError:
-                if instr["opcode"] not in [Opcode.JMP, Opcode.JGE] and split[1][0] != '*':
+                if instr["opcode"] not in [Opcode.JMP, Opcode.JGE, Opcode.CALL] and split[1][0] != '*':
                     instr["arg"] = ord(split[1][1])
                 else:
                     instr["arg"] = split[1]
