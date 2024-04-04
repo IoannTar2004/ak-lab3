@@ -62,7 +62,7 @@ class Decoder:
         if self.opcode == Opcode.JMP:
             self.cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
             flow = True
-        if self.opcode == Opcode.JGE and dp.flags["n"] != 1:
+        elif self.opcode == Opcode.JGE and dp.flags["n"] != 1:
             self.cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
             flow = True
         self.cu.tick()
@@ -70,38 +70,62 @@ class Decoder:
 
     def decode_subprogram_commands(self):
         dp = self.cu.data_path
-        match self.opcode:
-            case Opcode.CALL:
-                dp.alu_working(Opcode.DEC, [Valves.STACK])
-                dp.signal_latch_regs(Signal.STACK_LATCH)
-                dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
-                self.cu.tick()
+        if self.opcode == Opcode.CALL:
+            dp.alu_working(Opcode.DEC, [Valves.STACK])
+            dp.signal_latch_regs(Signal.STACK_LATCH)
+            dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
+            self.cu.tick()
 
-                dp.alu_working()
-                dp.signal_latch_regs(Signal.BUF_LATCH)
+            dp.alu_working()
+            dp.signal_latch_regs(Signal.BUF_LATCH)
 
-                self.cu.tick()
-                dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.cu.ip)
-                dp.alu_working()
-                dp.memory_manager(Signal.WRITE)
-                self.cu.tick()
+            self.cu.tick()
+            dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.cu.ip)
+            dp.alu_working()
+            dp.memory_manager(Signal.WRITE)
+            self.cu.tick()
 
-                dp.alu_working(valves=[Valves.BUF])
-                dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
-                self.cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
-            case Opcode.RET:
-                dp.alu_working(valves=[Valves.STACK])
-                dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
-                self.cu.tick()
+            dp.alu_working(valves=[Valves.BUF])
+            dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
+            self.cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
+        elif self.opcode == Opcode.RET:
+            dp.alu_working(valves=[Valves.STACK])
+            dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
+            self.cu.tick()
 
-                dp.memory_manager(Signal.READ)
-                dp.alu_working(valves=[Valves.MEM])
-                self.cu.signal_latch_ip(Signal.DATA_IP)
-                self.cu.tick()
+            dp.memory_manager(Signal.READ)
+            dp.alu_working(valves=[Valves.MEM])
+            self.cu.signal_latch_ip(Signal.DATA_IP)
+            self.cu.tick()
 
-                dp.alu_working(Opcode.INC, [Valves.STACK])
-                dp.signal_latch_regs(Signal.STACK_LATCH)
+            dp.alu_working(Opcode.INC, [Valves.STACK])
+            dp.signal_latch_regs(Signal.STACK_LATCH)
         self.cu.tick()
 
     def decode_interrupt_commands(self):
         self.cu.ei = 1 if self.opcode == Opcode.EI else 0
+
+    def decode_stack_commands(self):
+        dp = self.cu.data_path
+        if self.opcode == Opcode.PUSH:
+            dp.alu_working(Opcode.DEC, [Valves.STACK])
+            dp.signal_latch_regs(Signal.STACK_LATCH)
+            dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
+            self.cu.tick()
+
+            dp.alu_working()
+            dp.memory_manager(Signal.WRITE)
+        else:
+            dp.alu_working(valves=[Valves.STACK])
+            dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
+            self.cu.tick()
+
+            dp.memory_manager(Signal.READ)
+            dp.alu_working(valves=[Valves.MEM])
+            dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
+            self.cu.tick()
+
+            dp.alu_working(Opcode.INC, [Valves.STACK])
+            dp.signal_latch_regs(Signal.STACK_LATCH)
+
+        self.cu.tick()

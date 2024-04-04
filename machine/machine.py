@@ -109,12 +109,14 @@ class ControlUnit:
             elif decode.opcode in [Opcode.JMP, Opcode.JGE]:
                 if decode.decode_flow_commands():
                     continue
-            elif decode.opcode in [Opcode.CALL, Opcode.RET, Opcode.IRET]:
+            elif decode.opcode in [Opcode.CALL, Opcode.RET]:
                 decode.decode_subprogram_commands()
                 if decode.opcode != Opcode.RET:
                     continue
             elif decode.opcode in [Opcode.EI, Opcode.DI]:
                 decode.decode_interrupt_commands()
+            elif decode.opcode in [Opcode.PUSH, Opcode.POP]:
+                decode.decode_stack_commands()
 
             self.signal_latch_ip()
 
