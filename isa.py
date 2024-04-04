@@ -9,12 +9,12 @@ class Opcode:
     REM = "rem"
     INC = "inc"
     DEC = "dec"
+    CMP = "cmp"
 
     IN = "in"
     OUT = "print"
 
     JMP = "jmp"
-    JZ = "jz"
     JGE = "jge"
 
     CALL = "call"

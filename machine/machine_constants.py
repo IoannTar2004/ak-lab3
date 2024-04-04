@@ -8,6 +8,13 @@ class Signal:
     READ = 6
 
     STACK_LATCH = 7
+    BUF_LATCH = 8
+
+    NEXT_IP = 9
+    JMP_ARG = 10
+    INTERRUPT = 11
+    DATA_IP = 12
+
 
 
 class Bus:

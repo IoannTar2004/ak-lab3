@@ -2,6 +2,8 @@ import json
 import re
 from isa import Opcode
 
+start = 0
+
 
 def labels_insert(labels, instructions):
     for instr in instructions:
@@ -11,8 +13,13 @@ def labels_insert(labels, instructions):
 
 def labels_parse(labels, line, index):
     split = re.split("\\s*:\\s*", line)
+    if split[0] == "_start":
+        global start
+        start = index
     labels[split[0]] = index
-    split.pop(0)
+    if split[1] == '':
+        return True
+    return False
 
 
 def translator(code):
@@ -25,8 +32,9 @@ def translator(code):
             continue
 
         if ":" in line:
-            labels_parse(labels, line, index)
-            continue
+            if labels_parse(labels, line, index):
+                continue
+        line = re.sub("\\w+:\\s*", "", line)
         split = re.split("(?<!')\\s+(?!=')", line)
         instr = {"index": index, "opcode": split[0]}
 
@@ -34,7 +42,7 @@ def translator(code):
             try:
                 instr["arg"] = int(split[1])
             except ValueError:
-                if instr["opcode"] not in [Opcode.JMP, Opcode.JZ, Opcode.JGE] and split[1][0] != '*':
+                if instr["opcode"] not in [Opcode.JMP, Opcode.JGE] and split[1][0] != '*':
                     instr["arg"] = ord(split[1][1])
                 else:
                     instr["arg"] = split[1]
@@ -49,7 +57,7 @@ def tr():
         code = f.readlines()
     instructions = translator(code)
 
-    buf = []
+    buf = [json.dumps({"_start": start})]
     for instr in instructions:
         buf.append(json.dumps(instr))
     with open("out.txt", "w") as f:

@@ -1,2 +1,7 @@
-[{"index": 0, "opcode": "dec"},
- {"index": 1, "opcode": "halt"}]
+[{"_start": 0},
+ {"index": 0, "opcode": "load", "arg": -3},
+ {"index": 1, "opcode": "inc"},
+ {"index": 2, "opcode": "cmp", "arg": 0},
+ {"index": 3, "opcode": "jge", "arg": 5},
+ {"index": 4, "opcode": "jmp", "arg": 1},
+ {"index": 5, "opcode": "halt"}]
