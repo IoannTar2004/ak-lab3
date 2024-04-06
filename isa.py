@@ -12,15 +12,23 @@ class Opcode:
     CMP = "cmp"
 
     IN = "in"
-    OUT = "print"
+    OUT = "out"
+    CLK = "clk"
+    SIGN = "sign"
 
     JMP = "jmp"
+    JE = "je"
+    JNE = "jne"
     JGE = "jge"
 
     CALL = "call"
+    ISR = "isr"
     RET = "ret"
-    DI = "DI"
-    EI = "EI"
+    IRET = "iret"
+    DI = "di"
+    EI = "ei"
+    INTERRUPT = "int"
+    TIMER = "timer"
 
     POP = "pop"
     PUSH = "push"

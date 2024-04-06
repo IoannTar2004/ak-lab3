@@ -1,10 +1,6 @@
-func:
-    add 10
-    push
-    load *3
-    pop
-    ret
 _start:
-    load -3
-    call func
+    load 65
+    print
+    load 98
+    print
     halt

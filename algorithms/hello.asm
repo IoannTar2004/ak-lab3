@@ -1,30 +1,46 @@
+transfer:
+    store *0
+    load 0
+    sign 3  ; CS = 0
+
+    load 8  ; счётчик переданных битов
+    char:
+        store *1
+        load *0
+        clk 0
+        store *0
+        load *1
+        dec
+        cmp 0
+        jne char
+    load 1
+    sign 3  ;CS = 1
+    iret
+
 _start:
+    in 1
+    out 2
+    out 3
+    load 1
+    sign 3
+
+    int print
+    timer 2
+    ei
+
     load 'H'
-    print
     load 'e'
-    print
     load 'l'
-    print
     load 'l'
-    print
     load 'o'
-    print
     load ' '
-    print
 
     load 'w'
-    print
     load 'o'
-    print
     load 'r'
-    print
     load 'l'
-    print
     load 'd'
-    print
     load '!'
-    print
     load 0
-    print
 
     halt

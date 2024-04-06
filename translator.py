@@ -3,7 +3,7 @@ import re
 from isa import Opcode
 
 start = 0
-
+commands_with_labels = [Opcode.JMP, Opcode.JGE, Opcode.JE, Opcode.JNE, Opcode.CALL, Opcode.INTERRUPT]
 
 def labels_insert(labels, instructions):
     for instr in instructions:
@@ -28,7 +28,7 @@ def translator(code):
     index = 0
     for line in code:
         line = line.strip()
-        if len(line) == 0:
+        if len(line) == 0 or line[0] == ';':
             continue
 
         if ":" in line:
@@ -42,7 +42,7 @@ def translator(code):
             try:
                 instr["arg"] = int(split[1])
             except ValueError:
-                if instr["opcode"] not in [Opcode.JMP, Opcode.JGE, Opcode.CALL] and split[1][0] != '*':
+                if instr["opcode"] not in commands_with_labels and split[1][0] != '*':
                     instr["arg"] = ord(split[1][1])
                 else:
                     instr["arg"] = split[1]
@@ -53,7 +53,7 @@ def translator(code):
 
 
 def tr():
-    with open('../algorithms/test.asm') as f:
+    with open('../algorithms/hello.asm') as f:
         code = f.readlines()
     instructions = translator(code)
 
