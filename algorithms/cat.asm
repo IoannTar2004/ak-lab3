@@ -1,10 +1,10 @@
 transfer:
-    store *0
+    store *0        ; сохраняю передаваемый байт в ячейку 0
     load 0
-    sign 3  ; CS = 0
+    sign 3          ; CS = 0
 
-    load 8  ; счётчик переданных битов
-    char:
+    load 8          ; счётчик переданных битов
+    char:           ; цикл для передачи и получения данных от slave путем подачи тактовых импульсов командой clk на порт 0.
         store *1
         load *0
         clk 0
@@ -14,22 +14,22 @@ transfer:
         cmp 0
         jne char
     load 1
-    sign 3  ;CS = 1
+    sign 3          ; CS = 1
     iret
 
 _start:
-    timer 6
-    int transfer
-    ei
+    int transfer        ; устанавливаю функцию transfer как обработчик прерывания
+    timer 6             ; установка таймера с задержкой в 6 тактов
+    ei                  ; разрешаю прерывания (включаю таймер прерываний)
 
-    in 1
-    out 2
-    out 3
+    in 1                ; порт 1 (MISO) устанавливаю на прием данных
+    out 2               ; порт 2 (MOSI) устанавливаю на передачу данных
+    out 3               ; порт 3 (CS) устанавливаю на вывод сигнала
     load 1
-    sign 3
+    sign 3              ; устанавливаю cs в 1
 
     loop:
         load *0
         cmp 0
         jne loop
-    end: halt
+    halt

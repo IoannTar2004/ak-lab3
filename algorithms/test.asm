@@ -1,6 +1,7 @@
 _start:
     load 65
-    print
-    load 98
-    print
-    halt
+    store *3
+    load 3
+    store *0
+
+    store **0+

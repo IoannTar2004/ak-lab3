@@ -1,5 +1,6 @@
 from isa import Opcode
 from machine_signals import *
+import re
 
 
 class Decoder:
@@ -14,19 +15,37 @@ class Decoder:
         self.opcode = opcode
         self.arg = arg
 
+    def process_relative_addressing(self):
+        dp = self.cu.data_path
+        dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(re.sub("\\*|\\+", "", self.arg)))
+        count = self.arg.count('*') - 1
+        for i in range(count):
+            dp.memory_manager(Signal.READ)
+            dp.alu_working(valves=[Valves.MEM])
+            dp.signal_latch_regs(Signal.BUF_LATCH)
+            self.cu.tick()
+            if self.arg[-1] == '+' and i == 0:
+                dp.alu_working(Opcode.INC, [Valves.BUF])
+                dp.memory_manager(Signal.WRITE)
+                self.cu.tick()
+
+            dp.alu_working(valves=[Valves.BUF])
+            self.cu.data_path.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
+            self.cu.tick()
+
     def decode_memory_commands(self):
         dp = self.cu.data_path
         if self.opcode == Opcode.LOAD:
-            if isinstance(self.arg, int) or self.arg[0] != '*':
+            if isinstance(self.arg, int):
                 dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
             else:
-                dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(self.arg[1:]))
+                self.process_relative_addressing()
                 dp.memory_manager(Signal.READ)
                 dp.alu_working(valves=[Valves.MEM])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
 
         elif self.opcode == Opcode.STORE:
-            dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(self.arg[1:]))
+            self.process_relative_addressing()
             dp.alu_working()
             dp.memory_manager(Signal.WRITE)
         self.cu.tick()

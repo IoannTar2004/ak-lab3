@@ -5,6 +5,7 @@ from isa import Opcode
 start = 0
 commands_with_labels = [Opcode.JMP, Opcode.JGE, Opcode.JE, Opcode.JNE, Opcode.CALL, Opcode.INTERRUPT]
 
+
 def labels_insert(labels, instructions):
     for instr in instructions:
         if "arg" in instr and instr["arg"] in labels:
@@ -28,6 +29,7 @@ def translator(code):
     index = 0
     for line in code:
         line = line.strip()
+        line = re.sub("\\s*;.*", "", line)
         if len(line) == 0 or line[0] == ';':
             continue
 
@@ -53,7 +55,7 @@ def translator(code):
 
 
 def tr():
-    with open('../algorithms/cat.asm') as f:
+    with open('../algorithms/hello_user_name.asm') as f:
         code = f.readlines()
     instructions = translator(code)
 
