@@ -61,14 +61,10 @@ class Decoder:
                 dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
                 self.cu.tick()
 
-                if self.opcode not in [Opcode.SUB, Opcode.DIV, Opcode.REM, Opcode.CMP]:
-                    dp.alu_working(self.opcode, [Valves.ACC, Valves.BUF])
-                else:
-                    dp.alu_working(self.opcode, [Valves.BUF, Valves.ACC])
+                dp.alu_working(self.opcode, [Valves.BUF, Valves.ACC])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
-
             else:
-                dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(self.arg[1:]))
+                self.process_relative_addressing()
                 dp.memory_manager(Signal.READ)
                 dp.alu_working(self.opcode, [Valves.ACC, Valves.MEM])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)

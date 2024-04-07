@@ -4,4 +4,5 @@ _start:
     load 3
     store *0
 
-    store **0+
+    sub 30
+    halt

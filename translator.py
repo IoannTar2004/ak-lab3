@@ -55,7 +55,7 @@ def translator(code):
 
 
 def tr():
-    with open('../algorithms/hello_user_name.asm') as f:
+    with open('../algorithms/prob2.asm') as f:
         code = f.readlines()
     instructions = translator(code)
 

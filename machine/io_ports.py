@@ -47,9 +47,11 @@ def shift(number):
 class Slave:
     data_reg = 0
 
-    output_buffer = None
+    output_buffer = []
 
     input_tokens = []
+
+    can_output = False
 
     ports = None
 
@@ -67,12 +69,11 @@ class Slave:
 
     def add_to_output_buffer(self):
         if self.ports[CS] == 1:
-            if self.output_buffer is None:
-                self.output_buffer = []
+            if not self.can_output:
+                self.can_output = True
             else:
                 if self.data_reg != 1:
                     self.output_buffer.append(chr(self.data_reg))
                 if len(self.input_tokens) > 0:
                     self.input_tokens.pop(0)
                 self.data_reg = 0
-
