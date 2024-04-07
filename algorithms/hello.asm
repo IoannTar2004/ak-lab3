@@ -24,7 +24,7 @@ _start:
     load 1
     sign 3
 
-    int print
+    int transfer
     timer 2
     ei
 

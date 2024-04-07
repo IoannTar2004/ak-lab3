@@ -33,4 +33,5 @@ class Opcode:
     POP = "pop"
     PUSH = "push"
 
+    NOPE = "nope"
     HALT = "halt"

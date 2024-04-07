@@ -53,7 +53,7 @@ def translator(code):
 
 
 def tr():
-    with open('../algorithms/hello.asm') as f:
+    with open('../algorithms/cat.asm') as f:
         code = f.readlines()
     instructions = translator(code)
 

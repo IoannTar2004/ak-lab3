@@ -101,6 +101,7 @@ class ControlUnit:
 
     def tick(self):
         self._tick += 1
+        self.data_path.ports.slave.add_input(self._tick)
         self.data_path.data_bus = 0
         self.data_path.memory_bus = 0
 
@@ -129,12 +130,14 @@ class ControlUnit:
                 decode.decode_stack_commands()
             elif decode.opcode in [Opcode.IN, Opcode.OUT, Opcode.CLK, Opcode.SIGN]:
                 decode.decode_io_commands()
+            else:
+                self.tick()
 
+            if instr["opcode"] not in [Opcode.CALL, Opcode.IRET]:
+                self.signal_latch_ip(signal, decode.arg)
             if self.int_rq:
                 decode.opcode = Opcode.ISR
                 decode.decode_subprogram_commands()
-            elif decode.opcode != Opcode.CALL:
-                self.signal_latch_ip(signal, decode.arg)
 
     def signal_latch_ip(self, signal=Signal.NEXT_IP, arg=0):
         match signal:
