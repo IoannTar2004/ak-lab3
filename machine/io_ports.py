@@ -10,7 +10,7 @@ CS = 3
 class Ports:
     ports_config = {SCLK: [], MISO: [], MOSI: [], CS: []}
 
-    data = {SCLK: 0, MISO: '', MOSI: '', CS: 0}
+    data = {SCLK: 0, MISO: '0', MOSI: '0', CS: 0}
 
     slave = None
 

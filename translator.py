@@ -1,5 +1,7 @@
 import json
 import re
+import sys
+
 from isa import Opcode
 
 start = 0
@@ -23,11 +25,11 @@ def labels_parse(labels, line, index):
     return False
 
 
-def translator(code):
+def translator(source):
     instructions = []
     labels = {}
     index = 0
-    for line in code:
+    for i, line in enumerate(source):
         line = line.strip()
         line = re.sub("\\s*;.*", "", line)
         if len(line) == 0 or line[0] == ';':
@@ -54,13 +56,15 @@ def translator(code):
     return instructions
 
 
-def tr():
-    with open('../algorithms/prob2.asm') as f:
+if __name__ == "__main__":
+    assert len(sys.argv) == 3, "Wrong arguments: translator.py <input_file> <target_file>"
+    _, source, target = sys.argv
+    with open(source, "r") as f:
         code = f.readlines()
     instructions = translator(code)
 
     buf = [json.dumps({"_start": start})]
     for instr in instructions:
         buf.append(json.dumps(instr))
-    with open("out.txt", "w") as f:
+    with open(target, "w") as f:
         f.write("[" + ",\n ".join(buf) + "]")

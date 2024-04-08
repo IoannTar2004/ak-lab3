@@ -1,7 +1,12 @@
+import json
+import sys
+import decoder
+import logging
+import io_ports
+
 from isa import Opcode
 from machine_signals import *
-import io_ports
-import decoder
+from logger import Logger
 
 arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.REM, Opcode.INC, Opcode.DEC, Opcode.CMP]
 
@@ -17,68 +22,85 @@ class DataPath:
 
     address_reg = 0
 
-    memory_bus = 0
+    memory_out = 0
 
     flags = {"z": False, "n": False}
 
-    data_bus = 0
+    alu_out = 0
+
+    in_interruption = False
 
     def __init__(self, ports, memory_capacity):
         self.data_memory = [0] * memory_capacity
         self.ports = ports
 
     def signal_latch_acc(self, sel, load=0):
-        self.acc = load if sel == Signal.DIRECT_ACC_LOAD else self.data_bus
+        self.acc = load if sel == Signal.DIRECT_ACC_LOAD else self.alu_out
 
     def signal_latch_address(self, sel, load=0):
-        self.address_reg = load if sel == Signal.DIRECT_ADDRESS_LOAD else self.data_bus
+        self.address_reg = load if sel == Signal.DIRECT_ADDRESS_LOAD else self.alu_out
 
     def memory_manager(self, operation):
         if operation == Signal.READ:
-            self.memory_bus = self.data_memory[self.address_reg]
+            self.memory_out = self.data_memory[self.address_reg]
         elif operation == Signal.WRITE:
-            self.data_memory[self.address_reg] = self.data_bus
+            self.data_memory[self.address_reg] = self.alu_out
 
     def signal_latch_regs(self, *regs):
         if Signal.BUF_LATCH in regs:
-            self.buf_reg = self.data_bus
+            self.buf_reg = self.alu_out
         if Signal.STACK_LATCH in regs:
-            self.stack_pointer = self.data_bus
+            self.stack_pointer = self.alu_out
 
     def execute_alu_operation(self, operation, value=0):
         match operation:
-            case Opcode.ADD: return self.data_bus + value
-            case Opcode.SUB: return self.data_bus - value
-            case Opcode.MUL: return self.data_bus * value
-            case Opcode.DIV: return self.data_bus // value
-            case Opcode.REM: return self.data_bus % value
-            case Opcode.INC: return self.data_bus + 1
-            case Opcode.DEC: return self.data_bus - 1
+            case Opcode.ADD:
+                return self.alu_out + value
+            case Opcode.SUB:
+                return self.alu_out - value
+            case Opcode.MUL:
+                return self.alu_out * value
+            case Opcode.DIV:
+                return self.alu_out // value
+            case Opcode.REM:
+                return self.alu_out % value
+            case Opcode.INC:
+                return self.alu_out + 1
+            case Opcode.DEC:
+                return self.alu_out - 1
             case Opcode.CMP:
-                self.flags = {"z": self.data_bus == value, "n": self.data_bus < value}
-                return self.data_bus
+                self.flags = {"z": self.alu_out == value, "n": self.alu_out < value}
+                return self.alu_out
 
     def get_bus_value(self, bus):
         match bus:
-            case Valves.ACC: return self.acc
-            case Valves.BUF: return self.buf_reg
-            case Valves.STACK: return self.stack_pointer
-            case Valves.MEM: return self.memory_bus
+            case Valves.ACC:
+                return self.acc
+            case Valves.BUF:
+                return self.buf_reg
+            case Valves.STACK:
+                return self.stack_pointer
+            case Valves.MEM:
+                return self.memory_out
 
     def alu_working(self, operation=Opcode.ADD, valves=[Valves.ACC]):
-        self.data_bus = self.get_bus_value(valves[0])
+        self.alu_out = self.get_bus_value(valves[0])
         if Valves.ACC in valves:
-            self.flags = {"z": self.acc == 0, "n": self.data_bus < 0}
+            self.flags = {"z": self.acc == 0, "n": self.alu_out < 0}
         if operation in [Opcode.INC, Opcode.DEC]:
-            self.data_bus = self.execute_alu_operation(operation)
+            self.alu_out = self.execute_alu_operation(operation)
         elif len(valves) > 1:
-            self.data_bus = self.execute_alu_operation(operation, self.get_bus_value(valves[1]))
+            self.alu_out = self.execute_alu_operation(operation, self.get_bus_value(valves[1]))
 
 
 class ControlUnit:
     data_path: DataPath = None
 
     ip = 0
+
+    instr = None
+
+    instr_counter = 0
 
     ei = False
 
@@ -92,6 +114,9 @@ class ControlUnit:
 
     timer = None
 
+    def get_ticks(self):
+        return self._tick
+
     def __init__(self, instructions, data_path):
         self.ip = instructions[0]["_start"]
         del instructions[0]
@@ -100,10 +125,11 @@ class ControlUnit:
         self.timer = self.Timer()
 
     def tick(self):
+        Logger.debug(self, self._tick)
         self._tick += 1
         self.data_path.ports.slave.add_input(self._tick)
-        self.data_path.data_bus = 0
-        self.data_path.memory_bus = 0
+        self.data_path.alu_out = 0
+        self.data_path.memory_out = 0
 
         if self.ei:
             self.timer.time += 1
@@ -112,8 +138,9 @@ class ControlUnit:
 
     def execute(self):
         while self.instructions[self.ip]["opcode"] != Opcode.HALT:
-            instr = self.instructions[self.ip]
-            decode = decoder.Decoder(self, instr["opcode"], instr["arg"] if "arg" in instr else 0)
+            self.instr = self.instructions[self.ip]
+            self.instr_counter += 1
+            decode = decoder.Decoder(self, self.instr["opcode"], self.instr["arg"] if "arg" in self.instr else 0)
             signal = Signal.NEXT_IP
 
             if decode.opcode in [Opcode.LOAD, Opcode.STORE]:
@@ -130,21 +157,37 @@ class ControlUnit:
                 decode.decode_stack_commands()
             elif decode.opcode in [Opcode.IN, Opcode.OUT, Opcode.CLK, Opcode.SIGN]:
                 decode.decode_io_commands()
-            else:
-                self.tick()
 
-            if instr["opcode"] not in [Opcode.CALL, Opcode.IRET]:
+            if self.instr["opcode"] not in [Opcode.CALL, Opcode.IRET]:
                 self.signal_latch_ip(signal, decode.arg)
             if self.int_rq:
+                Logger.info("Interruption Request!", self._tick)
                 decode.opcode = Opcode.ISR
                 decode.decode_subprogram_commands()
+        self.instr = self.instructions[self.ip]
+        logging.debug(self)
+
+        return "".join(self.data_path.ports.slave.output_buffer), self.instr_counter, self._tick
 
     def signal_latch_ip(self, signal=Signal.NEXT_IP, arg=0):
         match signal:
-            case Signal.NEXT_IP: self.ip += 1
-            case Signal.JMP_ARG: self.ip = arg
-            case Signal.INTERRUPT: self.ip = self.int_address
-            case Signal.DATA_IP: self.ip = self.data_path.data_bus
+            case Signal.NEXT_IP:
+                self.ip += 1
+            case Signal.JMP_ARG:
+                self.ip = arg
+            case Signal.INTERRUPT:
+                self.ip = self.int_address
+            case Signal.DATA_IP:
+                self.ip = self.data_path.alu_out
+
+    def __repr__(self):
+        dp = self.data_path
+        return f"{'Interrupt! ' if dp.in_interruption else ''}" \
+               f"[{self.instr['index']}: {self.instr['opcode']} {self.instr['arg'] if 'arg' in self.instr else ''}] - "\
+               f"TICK: {self._tick} | ACC: {dp.acc} | BUF: {dp.buf_reg} | STACK: {dp.stack_pointer}" \
+               f" | ADDR: {dp.address_reg} | ALU_OUT: {dp.alu_out} | MEM_OUT: {dp.memory_out}" \
+               f" | FLAGS: {dp.flags} | EI: {self.ei} | INT_ADDRESS: {self.int_address}" \
+               f" | TIMER: {self.timer.timer_delay}"
 
     class Timer:
         time = 0
@@ -152,11 +195,31 @@ class ControlUnit:
         timer_delay = 0
 
 
-def simulation(code, input_tokens, memory_capacity):
+def simulation(machine, input_tokens, memory_capacity):
     slave = io_ports.Slave(input_tokens)
     ports = io_ports.Ports(slave)
     dp = DataPath(ports, memory_capacity)
-    cu = ControlUnit(code, dp)
-    cu.execute()
+    cu = ControlUnit(machine, dp)
 
-    return dp.ports.slave.output_buffer
+    out, instr_count, tick_count = cu.execute()
+    print(f"out: {out}")
+    print(f"ticks_count: {tick_count}")
+    print(f"instructions_count: {instr_count}")
+
+
+if __name__ == "__main__":
+    assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
+    _, code_file, input_file = sys.argv
+    Logger.init(code_file.split("/")[-1])
+
+    input_tokens = []
+    with open(input_file, "r", encoding="utf-8") as f:
+        time = 11
+        line = f.readline()
+        for char in line:
+            input_tokens.append((time, char))
+            time += 10
+
+    with open(code_file, "r", encoding="utf-8") as f:
+        code = json.load(f)
+    simulation(code, input_tokens, 30)

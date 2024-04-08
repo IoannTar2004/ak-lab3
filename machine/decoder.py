@@ -1,6 +1,8 @@
 from isa import Opcode
 from machine_signals import *
+from logger import Logger
 import re
+import logging
 
 
 class Decoder:
@@ -130,19 +132,20 @@ class Decoder:
             case Opcode.ISR:
                 self.cu.ei = False
                 self.cu.int_rq = False
+                dp.in_interruption = True
                 subprogram()
                 self.cu.signal_latch_ip(Signal.INTERRUPT)
                 self.cu.tick()
 
-                self.opcode = Opcode.PUSH
-                self.decode_stack_commands()
+                Decoder(self.cu, Opcode.PUSH, 0).decode_stack_commands()
             case Opcode.IRET:
-                self.opcode = Opcode.POP
-                self.decode_stack_commands()
+                Decoder(self.cu, Opcode.POP, 0).decode_stack_commands()
                 self.cu.tick()
 
                 ret()
                 self.cu.ei = True
+                dp.in_interruption = False
+                Logger.info("Return from interruption!", self.cu.get_ticks())
         self.cu.tick()
 
     def decode_interrupt_commands(self):
