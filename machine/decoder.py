@@ -145,7 +145,7 @@ class Decoder:
                 ret()
                 self.cu.ei = True
                 dp.in_interruption = False
-                Logger.info("Return from interruption!", self.cu.get_ticks())
+                self.cu.log.info("Return from interruption!", self.cu.get_ticks())
         self.cu.tick()
 
     def decode_interrupt_commands(self):
@@ -190,9 +190,9 @@ class Decoder:
         if self.opcode in [Opcode.IN, Opcode.OUT]:
             dp.ports.set_pin_mode(self.arg, self.opcode)
         elif self.opcode == Opcode.CLK:
-            dp.acc = dp.ports.impulse(self.arg, dp.acc)
+            dp.ports.impulse(self.arg)
             self.cu.tick()
-            dp.ports.impulse(self.arg, dp.acc)
+            dp.ports.impulse(self.arg)
         elif self.opcode == Opcode.SIGN:
-            dp.ports.signal(self.arg, dp.acc)
+            dp.ports.signal(self.arg)
         self.cu.tick()

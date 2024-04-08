@@ -1,8 +1,7 @@
 import json
 import sys
 import decoder
-import logging
-import io_ports
+from io_ports import *
 
 from isa import Opcode
 from machine_signals import *
@@ -12,7 +11,7 @@ arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.
 
 
 class DataPath:
-    ports: io_ports.Ports = None
+    ports: Ports = None
 
     acc = 0
 
@@ -30,7 +29,7 @@ class DataPath:
 
     in_interruption = False
 
-    def __init__(self, ports, memory_capacity):
+    def __init__(self, memory_capacity, ports):
         self.data_memory = [0] * memory_capacity
         self.ports = ports
 
@@ -114,6 +113,8 @@ class ControlUnit:
 
     timer = None
 
+    log: Logger = None
+
     def get_ticks(self):
         return self._tick
 
@@ -123,9 +124,11 @@ class ControlUnit:
         self.instructions = instructions
         self.data_path = data_path
         self.timer = self.Timer()
+        self.log = Logger("logs/processor.txt", sys.argv[1].split("/")[-1])
 
     def tick(self):
-        Logger.debug(self, self._tick)
+        self.log.debug(self, self._tick)
+
         self._tick += 1
         self.data_path.ports.slave.add_input(self._tick)
         self.data_path.alu_out = 0
@@ -161,11 +164,11 @@ class ControlUnit:
             if self.instr["opcode"] not in [Opcode.CALL, Opcode.IRET]:
                 self.signal_latch_ip(signal, decode.arg)
             if self.int_rq:
-                Logger.info("Interruption Request!", self._tick)
+                self.log.info("Interruption Request!", self._tick)
                 decode.opcode = Opcode.ISR
                 decode.decode_subprogram_commands()
         self.instr = self.instructions[self.ip]
-        logging.debug(self)
+        self.log.debug(self, self._tick)
 
         return "".join(self.data_path.ports.slave.output_buffer), self.instr_counter, self._tick
 
@@ -196,9 +199,10 @@ class ControlUnit:
 
 
 def simulation(machine, input_tokens, memory_capacity):
-    slave = io_ports.Slave(input_tokens)
-    ports = io_ports.Ports(slave)
-    dp = DataPath(ports, memory_capacity)
+    slave = Slave(input_tokens)
+    ports = Ports(slave)
+    dp = DataPath(memory_capacity, ports)
+    ports.data_path = dp
     cu = ControlUnit(machine, dp)
 
     out, instr_count, tick_count = cu.execute()
@@ -210,7 +214,6 @@ def simulation(machine, input_tokens, memory_capacity):
 if __name__ == "__main__":
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
-    Logger.init(code_file.split("/")[-1])
 
     input_tokens = []
     with open(input_file, "r", encoding="utf-8") as f:

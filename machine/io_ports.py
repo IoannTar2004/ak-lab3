@@ -1,4 +1,5 @@
 from isa import Opcode
+from logger import Logger
 
 
 SCLK = 0
@@ -12,29 +13,45 @@ class Ports:
 
     data = {SCLK: 0, MISO: '0', MOSI: '0', CS: 0}
 
+    data_path = None
+
     slave = None
+
+    log: Logger = None
 
     def __init__(self, slave):
         self.slave = slave
         self.slave.ports = self.data
 
+        self.log = Logger("logs/spi.txt", "spi")
+        self.slave.log = self.log
+
     def set_pin_mode(self, port_id, io):
         self.ports_config[port_id].append(io)
+        self.log.debug(self)
 
-    def impulse(self, port_id, acc):
+    def impulse(self, port_id):
         if self.data[port_id] == 0:
             self.data[port_id] = 1
             if Opcode.IN in self.ports_config[1] and Opcode.OUT in self.ports_config[2] and self.data[3] == 0:
-                self.data[MOSI], bin_acc = shift(acc)
+                self.data[MOSI], bin_acc = shift(self.data_path.acc)
                 self.slave.impulse()
-                acc = int(bin_acc + self.data[MISO], 2)
-                return acc
+                self.data_path.acc = int(bin_acc + self.data[MISO], 2)
+                self.log.debug(self)
         else:
             self.data[port_id] = 0
 
-    def signal(self, port_id, sign):
-        self.data[port_id] = sign
+    def signal(self, port_id):
+        self.data[port_id] = self.data_path.acc
+        self.log.debug(self)
         self.slave.add_to_output_buffer()
+        if self.data_path.acc == 0:
+            self.log.info("Start of character transmission")
+
+    def __repr__(self):
+        return f"SLAVE DR: {bin(self.slave.data_reg)[2:].zfill(8)} ({self.slave.data_reg}) "\
+               f"<-> ACC: {bin(self.data_path.acc)[2:].zfill(8)} ({self.data_path.acc})" \
+               f" | PORTS: {self.data} | PORTS_CONFIG: {self.ports_config}"
 
 
 def shift(number):
@@ -55,6 +72,8 @@ class Slave:
 
     ports = None
 
+    log: Logger = None
+
     def __init__(self, input_tokens):
         self.input_tokens = input_tokens
 
@@ -72,8 +91,10 @@ class Slave:
             if not self.can_output:
                 self.can_output = True
             else:
+                self.log.info("The transfer of the symbol is completed")
                 if self.data_reg != 1:
                     self.output_buffer.append(chr(self.data_reg))
+                    self.log.info(f"Added symbol '{chr(self.data_reg)}' to output_buffer")
                 if len(self.input_tokens) > 0:
                     self.input_tokens.pop(0)
                 self.data_reg = 0
