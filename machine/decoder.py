@@ -1,5 +1,5 @@
 from machine.isa import Opcode
-from machine.machine_signals import *
+from machine.machine_signals import Signal, Valves
 import re
 
 

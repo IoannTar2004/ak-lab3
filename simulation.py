@@ -1,6 +1,9 @@
 import json
+import os
+import sys
 
-from machine.cpu import *
+from machine.cpu import DataPath, ControlUnit
+from machine.io_ports import Ports, Slave
 
 
 def start(code_file, machine, input_tokens, memory_capacity):

@@ -1,6 +1,3 @@
-import os
-import sys
-
 from machine.isa import Opcode
 from machine.logger import Logger
 
@@ -51,7 +48,7 @@ class Ports:
         self.log.debug(self)
         self.slave.add_to_output_buffer()
         if self.data_path.acc == 0:
-            self.log.info(f"Start of character transmission")
+            self.log.info("Start of character transmission")
 
     def __repr__(self):
         return f"SLAVE DR: {bin(self.slave.data_reg)[2:].zfill(8)} ({self.slave.data_reg}) "\
