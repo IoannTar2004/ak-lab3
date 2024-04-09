@@ -165,7 +165,7 @@ DEBUG: [47: load **0+] - TICK: 161 | ACC: 101 | BUF: 5 | STACK: 0 | ADDR: 5 | AL
 INFO: Interruption Request!
 DEBUG: Interrupt! [47: load **0+] - TICK: 162 | ACC: 101 | BUF: 5 | STACK: -1 | ADDR: -1 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 9
 INFO: 
-	...Transfer the left symbols...
+...Transfer the left symbols...
 
 DEBUG: Interrupt! [47: load **0+] - TICK: 163 | ACC: 101 | BUF: 101 | STACK: -1 | ADDR: -1 | ALU_OUT: 101 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 9
 INFO: Interruption Request!

@@ -1,17 +1,14 @@
-import json
-import sys
-import decoder
-from io_ports import *
 
-from isa import Opcode
-from machine_signals import *
-from logger import Logger
+from machine.decoder import Decoder
+from machine.io_ports import *
+from machine.machine_signals import *
+from machine.isa import Opcode
 
 arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.REM, Opcode.INC, Opcode.DEC, Opcode.CMP]
 
 
 class DataPath:
-    ports: Ports = None
+    ports = None
 
     acc = 0
 
@@ -113,18 +110,18 @@ class ControlUnit:
 
     timer = None
 
-    log: Logger = None
+    log = None
 
     def get_ticks(self):
         return self._tick
 
-    def __init__(self, instructions, data_path):
+    def __init__(self, code_file, instructions, data_path):
         self.ip = instructions[0]["_start"]
         del instructions[0]
         self.instructions = instructions
         self.data_path = data_path
         self.timer = self.Timer()
-        self.log = Logger("logs/processor.txt", sys.argv[1].split("/")[-1])
+        self.log = Logger("logs/processor.txt", code_file)
 
     def tick(self):
         self.log.debug(self, self._tick)
@@ -143,7 +140,7 @@ class ControlUnit:
         while self.instructions[self.ip]["opcode"] != Opcode.HALT:
             self.instr = self.instructions[self.ip]
             self.instr_counter += 1
-            decode = decoder.Decoder(self, self.instr["opcode"], self.instr["arg"] if "arg" in self.instr else 0)
+            decode = Decoder(self, self.instr["opcode"], self.instr["arg"] if "arg" in self.instr else 0)
             signal = Signal.NEXT_IP
 
             if decode.opcode in [Opcode.LOAD, Opcode.STORE]:
@@ -196,33 +193,3 @@ class ControlUnit:
         time = 0
 
         timer_delay = 0
-
-
-def simulation(machine, input_tokens, memory_capacity):
-    slave = Slave(input_tokens)
-    ports = Ports(slave)
-    dp = DataPath(memory_capacity, ports)
-    ports.data_path = dp
-    cu = ControlUnit(machine, dp)
-
-    out, instr_count, tick_count = cu.execute()
-    print(f"out: {out}")
-    print(f"ticks_count: {tick_count}")
-    print(f"instructions_count: {instr_count}")
-
-
-if __name__ == "__main__":
-    assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
-    _, code_file, input_file = sys.argv
-
-    input_tokens = []
-    with open(input_file, "r", encoding="utf-8") as f:
-        time = 11
-        line = f.readline()
-        for char in line:
-            input_tokens.append((time, char))
-            time += 10
-
-    with open(code_file, "r", encoding="utf-8") as f:
-        code = json.load(f)
-    simulation(code, input_tokens, 30)

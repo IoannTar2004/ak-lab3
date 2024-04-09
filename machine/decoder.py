@@ -1,8 +1,6 @@
-from isa import Opcode
-from machine_signals import *
-from logger import Logger
+from machine.isa import Opcode
+from machine.machine_signals import *
 import re
-import logging
 
 
 class Decoder:

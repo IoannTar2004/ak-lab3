@@ -1,5 +1,8 @@
-from isa import Opcode
-from logger import Logger
+import os
+import sys
+
+from machine.isa import Opcode
+from machine.logger import Logger
 
 
 SCLK = 0
@@ -9,9 +12,9 @@ CS = 3
 
 
 class Ports:
-    ports_config = {SCLK: [], MISO: [], MOSI: [], CS: []}
+    ports_config = None
 
-    data = {SCLK: 0, MISO: '0', MOSI: '0', CS: 0}
+    data = None
 
     data_path = None
 
@@ -20,9 +23,11 @@ class Ports:
     log: Logger = None
 
     def __init__(self, slave):
+        self.data = {SCLK: 0, MISO: '0', MOSI: '0', CS: 0}
+        self.ports_config = {SCLK: [], MISO: [], MOSI: [], CS: []}
+
         self.slave = slave
         self.slave.ports = self.data
-
         self.log = Logger("logs/spi.txt", "spi")
         self.slave.log = self.log
 
@@ -46,7 +51,7 @@ class Ports:
         self.log.debug(self)
         self.slave.add_to_output_buffer()
         if self.data_path.acc == 0:
-            self.log.info("Start of character transmission")
+            self.log.info(f"Start of character transmission")
 
     def __repr__(self):
         return f"SLAVE DR: {bin(self.slave.data_reg)[2:].zfill(8)} ({self.slave.data_reg}) "\
@@ -62,11 +67,11 @@ def shift(number):
 
 
 class Slave:
-    data_reg = 0
+    data_reg = None
 
-    output_buffer = []
+    output_buffer = None
 
-    input_tokens = []
+    input_tokens = None
 
     can_output = False
 
@@ -75,6 +80,8 @@ class Slave:
     log: Logger = None
 
     def __init__(self, input_tokens):
+        self.data_reg = 0
+        self.output_buffer = []
         self.input_tokens = input_tokens
 
     def add_input(self, tick):

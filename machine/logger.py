@@ -1,16 +1,19 @@
 import logging
+import os
 
 
 class Logger:
-    code = ""
+    code = None
 
     log = None
 
     def __init__(self, log_file, name):
         self.code = name
+        with open("machine/" + log_file, "w") as log:
+            log.truncate(0)
         self.log = logging.getLogger(name)
         self.log.setLevel(logging.DEBUG)
-        handler = logging.FileHandler(log_file, "w")
+        handler = logging.FileHandler("machine/" + log_file, "w")
         formatter = logging.Formatter("%(levelname)s: %(message)s")
 
         handler.setFormatter(formatter)
@@ -18,11 +21,11 @@ class Logger:
 
     def skip_information(self, tick):
         if self.code == "hello_machine.txt" and tick == 119:
-            self.log.info("\n\t...Transfer the symbols 'e','l','l','o',' ','w','o','r','l','d','!'...\n")
+            self.log.info("\n...Transfer the symbols 'e','l','l','o',' ','w','o','r','l','d','!'...\n")
         elif self.code == "cat_machine.txt" and tick == 122 or self.code == "hello_user_name_machine.txt" and tick == 163:
-            self.log.info("\n\t...Transfer the left symbols...\n")
+            self.log.info("\n...Transfer the left symbols...\n")
         elif self.code == "prob2_machine.txt" and tick == 118:
-            self.log.info("\n\t...Continue calculating...\n")
+            self.log.info("\n...Continue calculating...\n")
 
     def can_log(self, tick):
         codes = {
@@ -42,3 +45,6 @@ class Logger:
     def debug(self, object, tick=0):
         if self.can_log(tick):
             self.log.debug(object)
+
+    def close(self):
+        self.log.handlers.pop()

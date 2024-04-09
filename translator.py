@@ -2,7 +2,7 @@ import json
 import re
 import sys
 
-from isa import Opcode
+from machine.isa import Opcode
 
 start = 0
 commands_with_labels = [Opcode.JMP, Opcode.JGE, Opcode.JE, Opcode.JNE, Opcode.CALL, Opcode.INTERRUPT]
@@ -56,10 +56,8 @@ def translator(source):
     return instructions
 
 
-if __name__ == "__main__":
-    assert len(sys.argv) == 3, "Wrong arguments: translator.py <input_file> <target_file>"
-    _, source, target = sys.argv
-    with open(source, "r") as f:
+def main(code, target):
+    with open(code, "r") as f:
         code = f.readlines()
     instructions = translator(code)
 
@@ -68,3 +66,9 @@ if __name__ == "__main__":
         buf.append(json.dumps(instr))
     with open(target, "w") as f:
         f.write("[" + ",\n ".join(buf) + "]")
+
+
+if __name__ == "__main__":
+    assert len(sys.argv) == 3, "Wrong arguments: translator.py <input_file> <target_file>"
+    _, source, target = sys.argv
+    main(source, target)
