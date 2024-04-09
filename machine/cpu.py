@@ -1,7 +1,7 @@
 from machine.decoder import Decoder
 from machine.machine_signals import Signal, Valves
 from machine.isa import Opcode
-from logger import Logger
+from machine.logger import Logger
 
 arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.REM, Opcode.INC, Opcode.DEC, Opcode.CMP]
 
