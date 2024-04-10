@@ -519,4 +519,38 @@ DataPath и выполняющие инструкции процессора. К
 - ```hello_user_name.asm``` - [hello_user_name_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
 - ```prob2.asm``` - [prob2_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/prob2_asm.yml)
 
+Наиболее подробно разобран алгоритм ```hello_user_name```
+- Ввод: 
+
+   ```Ivan Tarasov```
+
+- Вывод:
+    ```
+  Hello, Ivan Tarasov
+
+  ticks_count: 2503
+  instructions_count: 1582
+    ```
+- Файл с кодом - [hello_user_name.asm](https://github.com/IoannTar2004/ak-lab3/blob/main/algorithms/hello_user_name.asm)
+- Машинный код - [hello_user_name_machine.txt](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/machine_instructions/hello_user_name_machine.txt)
+- Журнал работы процессора - [processor.txt](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/logs/processor.txt)
+- Журнал работы spi - [spi.txt](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/logs/spi.txt)
+
 Основной файл с кодом теста находится в модуле [golden_asm_test.py](https://github.com/IoannTar2004/ak-lab3/blob/main/golden_asm_test.py)
+
+### CI
+
+Настройка CI находится в файле [.github/ci.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/.github/workflows/ci.yml)
+- on: push - означает, что рабочий процесс будет запускаться, когда происходит пуш в репозиторий.
+- test и lint - это рабочие процессы. В данном случае тестирование и линтер.
+- runs-on: ubuntu-latest -  указывает, что рабочий процесс будет выполняться в среде Ubuntu последней версии.
+- Далее происходит загрузка python, установка библиотек `pytest` и `ruff` и их запуск.
+
+## Аналитика алгоритмов
+
+```
+| ФИО | <алг> | <LoC> | <code инстр.> | <инстр.> | <такт.> | <вариант> |
+| Тарасов И.С. | hello | 48 | 40 | 946 | 1427 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
+| Тарасов И.С. | cat | 37 | 30 | 747 | 1135 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
+| Тарасов И.С. | hello_user_name | 74 | 54 | 1582 | 2503 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
+```
