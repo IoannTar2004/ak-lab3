@@ -50,8 +50,6 @@ source: |
 
     halt
 
-
-
 machine_code: |-
   [{"_start": 15},
    {"index": 0, "opcode": "store", "arg": "*2"},

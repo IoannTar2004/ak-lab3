@@ -464,6 +464,8 @@ DataPath и выполняющие инструкции процессора. К
 В классе ```DataPath``` есть поле in_interrupt. Если это поле - true, то логгер добавляет информацию, что процессор 
 находится в обработчике прерывания.
 
+Так как журналы работы процессора получаются слишком большими, для каждого алгоритма я обрезаю часть логов, оставляя
+только необходимое!
 
 ### Порты ввода-вывода и SPI
 
@@ -472,6 +474,7 @@ DataPath и выполняющие инструкции процессора. К
 Порты реализованы в классе ```Ports```, Slave - в ```Slave``` в модуле [io_ports](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/io_ports.py)
 
 **Порты ввода-вывода**
+- Информация о вводе-выводе по SPI записывается в [spi.txt](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/logs/spi.txt)
 - Каждый порт имеет свой адрес и конфигурацию 
 - Конфигурация подразумевает, как работает порт: на ввод (in) или на вывод (out). Установка работы портов происходит
 в методе ```set_pin_mode```.
@@ -498,3 +501,22 @@ DataPath и выполняющие инструкции процессора. К
 Но в любом случае, отправить данные нужно, даже если их нет. Поэтому во время первой передачи отправляется единица, 
 чтобы лишние данные не добавились в буфер вывода и не испортили вывод. Проверка осуществляется в методе ```add_to_output_buffer```
 - В конце строки добавляется нуль-терминатор (Вариант _cstr_).
+
+## Тестирование
+
+Тестирование выполняется при помощи golden test-ов в формате yaml. Файлы .yml лежат в папке 
+[tests](https://github.com/IoannTar2004/ak-lab3/tree/main/tests). Тесты содержат входные данные и проверку на
+- код программы
+- машинный код
+- вывод процессора
+- журнал работы процессора
+- журнал работы spi
+
+**Алгоритмы и их тесты**
+
+- ```hello.asm``` - [hello_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
+- ```cat.asm``` - [cat_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
+- ```hello_user_name.asm``` - [hello_user_name_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
+- ```prob2.asm``` - [prob2_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/prob2_asm.yml)
+
+Основной файл с кодом теста находится в модуле [golden_asm_test.py](https://github.com/IoannTar2004/ak-lab3/blob/main/golden_asm_test.py)

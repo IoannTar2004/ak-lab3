@@ -36,7 +36,8 @@ def main(code_file, input_file):
         code = json.load(f)
     out, instr_count, tick_count = start(os.path.basename(code_file), code, input_tokens, 30)
 
-    print(f"{out}\n")
+    if len(out) > 0:
+        print(f"{out}\n")
     print(f"ticks_count: {tick_count}")
     print(f"instructions_count: {instr_count}")
 
