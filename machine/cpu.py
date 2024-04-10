@@ -101,7 +101,7 @@ class ControlUnit:
 
     instructions = []
 
-    int_address = 0
+    int_vector = 0
 
     _tick = 0
 
@@ -137,8 +137,6 @@ class ControlUnit:
 
     def execute(self):
         while self.instructions[self.ip]["opcode"] != Opcode.HALT:
-            if self._tick > 120:
-                pass
             self.instr = self.instructions[self.ip]
             self.instr_counter += 1
             decode = Decoder(self, self.instr["opcode"], self.instr["arg"] if "arg" in self.instr else 0)
@@ -176,8 +174,6 @@ class ControlUnit:
                 self.ip += 1
             case Signal.JMP_ARG:
                 self.ip = arg
-            case Signal.INTERRUPT:
-                self.ip = self.int_address
             case Signal.DATA_IP:
                 self.ip = self.data_path.alu_out
 
@@ -187,7 +183,7 @@ class ControlUnit:
                f"[{self.instr['index']}: {self.instr['opcode']} {self.instr['arg'] if 'arg' in self.instr else ''}] - "\
                f"TICK: {self._tick} | ACC: {dp.acc} | BUF: {dp.buf_reg} | STACK: {dp.stack_pointer}" \
                f" | ADDR: {dp.address_reg} | ALU_OUT: {dp.alu_out} | MEM_OUT: {dp.memory_out}" \
-               f" | FLAGS: {dp.flags} | EI: {self.ei} | INT_ADDRESS: {self.int_address}" \
+               f" | FLAGS: {dp.flags} | EI: {self.ei} | INT_ADDRESS: {self.int_vector}" \
                f" | TIMER: {self.timer.timer_delay}"
 
     class Timer:

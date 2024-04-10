@@ -27,7 +27,6 @@ class Logger:
             self.log.info("\n...Continue calculating...\n")
 
     def can_log(self, tick):
-        # return True
         codes = {
             "hello_machine.txt": tick <= 120 or 1316 <= tick,
             "cat_machine.txt": tick <= 123 or 1019 <= tick,

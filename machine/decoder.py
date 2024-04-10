@@ -15,7 +15,7 @@ class Decoder:
         self.opcode = opcode
         self.arg = arg
 
-    def process_relative_addressing(self):
+    def process_addressing(self):
         dp = self.cu.data_path
         dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, int(re.sub("\\*|\\+", "", self.arg)))
         count = self.arg.count('*') - 1
@@ -39,13 +39,13 @@ class Decoder:
             if isinstance(self.arg, int):
                 dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
             else:
-                self.process_relative_addressing()
+                self.process_addressing()
                 dp.memory_manager(Signal.READ)
                 dp.alu_working(valves=[Valves.MEM])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
 
         elif self.opcode == Opcode.STORE:
-            self.process_relative_addressing()
+            self.process_addressing()
             dp.alu_working()
             dp.memory_manager(Signal.WRITE)
         self.cu.tick()
@@ -64,7 +64,7 @@ class Decoder:
                 dp.alu_working(self.opcode, [Valves.BUF, Valves.ACC])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
             else:
-                self.process_relative_addressing()
+                self.process_addressing()
                 dp.memory_manager(Signal.READ)
                 dp.alu_working(self.opcode, [Valves.ACC, Valves.MEM])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
@@ -135,7 +135,7 @@ class Decoder:
 
                     Decoder(self.cu, Opcode.PUSH, 0).decode_stack_commands()
 
-                    dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, self.cu.int_address)
+                    dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, self.cu.int_vector)
                     dp.memory_manager(Signal.READ)
                     dp.alu_working(valves=[Valves.MEM])
                     self.cu.signal_latch_ip(Signal.DATA_IP)
@@ -160,7 +160,7 @@ class Decoder:
             case Opcode.VECTOR:
                 dp = self.cu.data_path
                 dp.alu_working()
-                self.cu.int_address = dp.alu_out
+                self.cu.int_vector = dp.alu_out
             case Opcode.TIMER:
                 self.cu.timer.timer_delay = self.arg
         self.cu.tick()

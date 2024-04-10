@@ -12,7 +12,6 @@ class Signal:
 
     NEXT_IP = "next ip"
     JMP_ARG = "jmp arg"
-    INTERRUPT = "interrupt"
     DATA_IP = "data ip"
 
 
