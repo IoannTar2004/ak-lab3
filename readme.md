@@ -385,7 +385,45 @@ Opcode.
 
 Интерфейс командной строки: machine.py <machine_code_file> <input_file>
 
-Реализовано в модуле: [cpu](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/cpu.py).
-
 ### ControlUnit
+
+![control_unit](https://github.com/IoannTar2004/ak-lab3/blob/main/schemes/control_unit.png)
+
+Реализован в классе ```ControlUnit``` в модуле [cpu.py](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/cpu.py).
+
+Hardwired (реализовано полностью на Python).
+- Цикл симуляции осуществляется в метод ```execute```.
+- В методе ```execute``` вызываются методы класса ```Decoder```, формирующие управляющие сигналы и данные в 
+DataPath и выполняющие инструкции процессора. Класс ```Decoder``` реализован в модуле
+[decoder.py](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/decoder.py).
+- Отсчет времени работы ведется в тактах. После каждого такта (вариант _tick_) в логовый файл 
+[processor.txt](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/logs/processor.txt) добавляется информация
+о состоянии процессора. Состояние процессора показывает:
+    - текущую инструкцию
+    - время в тактах
+    - значения регистров
+    - данные на шинах (alu_out и memory_out)
+    - флаги
+    - разрешены ли прерывания
+    - вектор прерывания
+    - задержка таймера прерываний
+- Логирование осуществляется с использованием модуля **logging**. Для логирования реализован класс ```Logger``` в
+модуле [logger.py](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/logger.py) для более умной работы с
+логом.
+- Процессор выполняет инструкции, пока не дойдет до инструкции halt.
+- В Control Unit содержатся таймер прерываний, в который приходят 2 шины: 
+  - задержка
+  - разрешение прерываний. Включает/отключает таймер
+
+- А также контроллер прерываний, в который записывается вектор прерываний, пришедший по шине данных с DataPath.
+
+**Сигналы**
+- ```sel_address``` - выбирается адрес следующий команды. Реализующий метод - ```signal_latch_ip```.
+- ```int_rq``` - запрос на прерывание. Если true, то обрабатывается после окончания работы инструкции.
+
+### DataPath
+
+![DataPath](https://github.com/IoannTar2004/ak-lab3/blob/main/schemes/data_path.png)
+
+Реализован в классе ```DataPath``` в модуле [cpu.py](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/cpu.py).
 
