@@ -11,11 +11,6 @@ class Opcode:
     DEC = "dec"
     CMP = "cmp"
 
-    IN = "in"
-    OUT = "out"
-    CLK = "clk"
-    SIGN = "sign"
-
     JMP = "jmp"
     JE = "je"
     JNE = "jne"
@@ -25,6 +20,7 @@ class Opcode:
     ISR = "isr"
     RET = "ret"
     IRET = "iret"
+
     DI = "di"
     EI = "ei"
     INTERRUPT = "int"
@@ -33,5 +29,9 @@ class Opcode:
     POP = "pop"
     PUSH = "push"
 
-    NOPE = "nope"
+    IN = "in"
+    OUT = "out"
+    CLK = "clk"
+    SIGN = "sign"
+
     HALT = "halt"

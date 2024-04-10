@@ -125,17 +125,16 @@ class Decoder:
                 self.cu.signal_latch_ip(Signal.JMP_ARG, self.arg)
             case Opcode.RET:
                 ret()
-            case Opcode.INTERRUPT:
-                self.cu.int_address = self.arg
             case Opcode.ISR:
-                self.cu.ei = False
-                self.cu.int_rq = False
-                dp.in_interruption = True
-                subprogram()
-                self.cu.signal_latch_ip(Signal.INTERRUPT)
-                self.cu.tick()
+                if self.cu.ei and self.cu.int_rq:
+                    self.cu.ei = False
+                    self.cu.int_rq = False
+                    dp.in_interruption = True
+                    subprogram()
+                    self.cu.signal_latch_ip(Signal.INTERRUPT)
+                    self.cu.tick()
 
-                Decoder(self.cu, Opcode.PUSH, 0).decode_stack_commands()
+                    Decoder(self.cu, Opcode.PUSH, 0).decode_stack_commands()
             case Opcode.IRET:
                 Decoder(self.cu, Opcode.POP, 0).decode_stack_commands()
                 self.cu.tick()
