@@ -5,7 +5,7 @@ import sys
 from machine.isa import Opcode
 
 start = 0
-commands_with_labels = [Opcode.JMP, Opcode.JGE, Opcode.JE, Opcode.JNE, Opcode.CALL, Opcode.INTERRUPT]
+commands_with_labels = [Opcode.JMP, Opcode.JGE, Opcode.JE, Opcode.JNE, Opcode.CALL, Opcode.FUNC]
 
 
 def labels_insert(labels, instructions):

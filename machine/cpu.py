@@ -137,6 +137,8 @@ class ControlUnit:
 
     def execute(self):
         while self.instructions[self.ip]["opcode"] != Opcode.HALT:
+            if self._tick > 120:
+                pass
             self.instr = self.instructions[self.ip]
             self.instr_counter += 1
             decode = Decoder(self, self.instr["opcode"], self.instr["arg"] if "arg" in self.instr else 0)
@@ -148,9 +150,9 @@ class ControlUnit:
                 decode.decode_arithmetic_commands()
             elif decode.opcode in [Opcode.JMP, Opcode.JGE, Opcode.JE, Opcode.JNE]:
                 signal = decode.decode_flow_commands()
-            elif decode.opcode in [Opcode.CALL, Opcode.RET, Opcode.IRET]:
+            elif decode.opcode in [Opcode.CALL, Opcode.RET, Opcode.IRET, Opcode.FUNC]:
                 decode.decode_subprogram_commands()
-            elif decode.opcode in [Opcode.EI, Opcode.DI, Opcode.INTERRUPT, Opcode.TIMER]:
+            elif decode.opcode in [Opcode.EI, Opcode.DI, Opcode.VECTOR, Opcode.TIMER]:
                 decode.decode_interrupt_commands()
             elif decode.opcode in [Opcode.PUSH, Opcode.POP]:
                 decode.decode_stack_commands()

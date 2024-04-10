@@ -17,13 +17,14 @@ class Opcode:
     JGE = "jge"
 
     CALL = "call"
+    FUNC = "func"
     ISR = "isr"
     RET = "ret"
     IRET = "iret"
 
     DI = "di"
     EI = "ei"
-    INTERRUPT = "int"
+    VECTOR = "vec"
     TIMER = "timer"
 
     POP = "pop"

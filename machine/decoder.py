@@ -131,10 +131,14 @@ class Decoder:
                     self.cu.int_rq = False
                     dp.in_interruption = True
                     subprogram()
-                    self.cu.signal_latch_ip(Signal.INTERRUPT)
                     self.cu.tick()
 
                     Decoder(self.cu, Opcode.PUSH, 0).decode_stack_commands()
+
+                    dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, self.cu.int_address)
+                    dp.memory_manager(Signal.READ)
+                    dp.alu_working(valves=[Valves.MEM])
+                    self.cu.signal_latch_ip(Signal.DATA_IP)
             case Opcode.IRET:
                 Decoder(self.cu, Opcode.POP, 0).decode_stack_commands()
                 self.cu.tick()
@@ -143,6 +147,8 @@ class Decoder:
                 self.cu.ei = True
                 dp.in_interruption = False
                 self.cu.log.info("Return from interruption!", self.cu.get_ticks())
+            case Opcode.FUNC:
+                dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
         self.cu.tick()
 
     def decode_interrupt_commands(self):
@@ -151,8 +157,10 @@ class Decoder:
                 self.cu.ei = True
             case Opcode.DI:
                 self.cu.ei = False
-            case Opcode.INTERRUPT:
-                self.cu.int_address = self.arg
+            case Opcode.VECTOR:
+                dp = self.cu.data_path
+                dp.alu_working()
+                self.cu.int_address = dp.alu_out
             case Opcode.TIMER:
                 self.cu.timer.timer_delay = self.arg
         self.cu.tick()
