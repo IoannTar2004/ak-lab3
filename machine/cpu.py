@@ -7,27 +7,18 @@ arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.
 
 
 class DataPath:
-    ports = None
-
-    acc = 0
-
-    buf_reg = 0
-
-    stack_pointer = 0
-
-    address_reg = 0
-
-    memory_out = 0
-
-    flags = {"z": False, "n": False}
-
-    alu_out = 0
-
-    in_interruption = False
 
     def __init__(self, memory_capacity, ports):
         self.data_memory = [0] * memory_capacity
         self.ports = ports
+        self.acc = 0
+        self.buf_reg = 0
+        self.stack_pointer = 0
+        self.address_reg = 0
+        self.memory_out = 0
+        self.flags = {"z": False, "n": False}
+        self.alu_out = 0
+        self.in_interruption = False
 
     def signal_latch_acc(self, sel, load=0):
         self.acc = load if sel == Signal.DIRECT_ACC_LOAD else self.alu_out
@@ -89,38 +80,23 @@ class DataPath:
 
 
 class ControlUnit:
-    data_path: DataPath = None
-
-    ip = 0
-
-    instr = None
-
-    instr_counter = 0
-
-    ei = False
-
-    instructions = []
-
-    int_vector = 0
-
-    _tick = 0
-
-    int_rq = False
-
-    timer = None
-
-    log = None
-
-    def get_ticks(self):
-        return self._tick
 
     def __init__(self, code_file, instructions, data_path):
         self.ip = instructions[0]["_start"]
         del instructions[0]
+
         self.instructions = instructions
         self.data_path = data_path
         self.timer = self.Timer()
         self.log = Logger("logs/processor.txt", code_file)
+        self._tick = 0
+        self.int_vector = 0
+        self.instr_counter = 0
+        self.ei = False
+        self.int_rq = False
+
+    def get_ticks(self):
+        return self._tick
 
     def tick(self):
         self.log.debug(self, self._tick)

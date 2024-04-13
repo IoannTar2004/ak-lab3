@@ -4,11 +4,6 @@ import re
 
 
 class Decoder:
-    cu = None
-
-    opcode = None
-
-    arg = None
 
     def __init__(self, control_unit, opcode, arg):
         self.cu = control_unit

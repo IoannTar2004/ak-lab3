@@ -9,15 +9,6 @@ CS = 3
 
 
 class Ports:
-    ports_config = None
-
-    data = None
-
-    data_path = None
-
-    slave = None
-
-    log: Logger = None
 
     def __init__(self, slave):
         self.data = {SCLK: 0, MISO: '0', MOSI: '0', CS: 0}
@@ -27,6 +18,8 @@ class Ports:
         self.slave.ports = self.data
         self.log = Logger("logs/spi.txt", "spi")
         self.slave.log = self.log
+
+        self.data_path = None
 
     def set_pin_mode(self, port_id, io):
         self.ports_config[port_id].append(io)
@@ -64,22 +57,15 @@ def shift(number):
 
 
 class Slave:
-    data_reg = None
-
-    output_buffer = None
-
-    input_tokens = None
-
-    can_output = False
-
-    ports = None
-
-    log: Logger = None
 
     def __init__(self, input_tokens):
         self.data_reg = 0
         self.output_buffer = []
         self.input_tokens = input_tokens
+        self.can_output = False
+
+        self.ports = None
+        self.log = None
 
     def add_input(self, tick):
         if len(self.input_tokens) > 0 and self.ports[CS] == 1 and tick >= self.input_tokens[0][0]:
