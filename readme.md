@@ -514,9 +514,9 @@ DataPath и выполняющие инструкции процессора. К
 
 **Алгоритмы и их тесты**
 
-- ```hello.asm``` - [hello_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
+- ```hello.asm``` - [hello_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/hello_asm.yml)
 - ```cat.asm``` - [cat_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
-- ```hello_user_name.asm``` - [hello_user_name_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/cat_asm.yml)
+- ```hello_user_name.asm``` - [hello_user_name_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/hello_user_name_asm.yml)
 - ```prob2.asm``` - [prob2_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/prob2_asm.yml)
 
 Наиболее подробно разобран алгоритм ```hello_user_name```
