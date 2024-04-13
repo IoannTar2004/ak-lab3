@@ -1,111 +1,189 @@
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: [], 3: []}
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: []}
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00100000 (32) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: [], 3: []}
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00100000 (32) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: []}
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00100000 (32) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001001 (73) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 10010000 (144) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 00100000 (32) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000010 (2) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000100 (4) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001001 (9) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00010010 (18) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00100100 (36) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01001000 (72) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01001000 (72) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10010010 (146) <-> ACC: 10010000 (144) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100101 (37) <-> ACC: 00100001 (33) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001010 (74) <-> ACC: 01000010 (66) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10010100 (148) <-> ACC: 10000100 (132) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00101001 (41) <-> ACC: 00001001 (9) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01010010 (82) <-> ACC: 00010010 (18) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10100100 (164) <-> ACC: 00100100 (36) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001000 (72) <-> ACC: 01001001 (73) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001000 (72) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '1', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
 INFO: Added symbol 'H' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110110 (118) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11001010 (202) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10010100 (148) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 00101000 (40) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 01010000 (80) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001100 (12) <-> ACC: 10100000 (160) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011001 (25) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110010 (50) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01100101 (101) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11101100 (236) <-> ACC: 11001010 (202) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11011001 (217) <-> ACC: 10010101 (149) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10110011 (179) <-> ACC: 00101011 (43) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100110 (102) <-> ACC: 01010111 (87) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11001100 (204) <-> ACC: 10101110 (174) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10011001 (153) <-> ACC: 01011101 (93) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110010 (50) <-> ACC: 10111011 (187) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100101 (101) <-> ACC: 01110110 (118) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 DEBUG: SLAVE DR: 01100101 (101) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
 INFO: Added symbol 'e' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11011000 (216) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10110000 (176) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01100000 (96) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110110 (54) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11000010 (194) <-> ACC: 11011000 (216) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10000101 (133) <-> ACC: 10110001 (177) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001011 (11) <-> ACC: 01100011 (99) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00010110 (22) <-> ACC: 11000110 (198) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00101101 (45) <-> ACC: 10001100 (140) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01011011 (91) <-> ACC: 00011000 (24) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10110110 (182) <-> ACC: 00110000 (48) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 01100001 (97) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '1', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'l' to output_buffer
+DEBUG: SLAVE DR: 01101110 (110) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11011100 (220) <-> ACC: 11011000 (216) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10111001 (185) <-> ACC: 10110001 (177) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110011 (115) <-> ACC: 01100011 (99) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11100110 (230) <-> ACC: 11000110 (198) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11001101 (205) <-> ACC: 10001101 (141) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10011011 (155) <-> ACC: 00011011 (27) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110110 (54) <-> ACC: 00110111 (55) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 01101110 (110) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
 INFO: Added symbol 'l' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100000 (32) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11011000 (216) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10110000 (176) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01100000 (96) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110110 (54) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-INFO: The transfer of the symbol is completed
-INFO: Added symbol 'l' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11011110 (222) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10111100 (188) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01111000 (120) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11110000 (240) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 11100000 (224) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110111 (55) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01000000 (64) <-> ACC: 11011110 (222) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10000001 (129) <-> ACC: 10111100 (188) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01111001 (121) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11110010 (242) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 11100100 (228) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 11001000 (200) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110111 (55) <-> ACC: 10010000 (144) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00100000 (32) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
 INFO: Added symbol 'o' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01010100 (84) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000010 (2) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000100 (4) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001000 (8) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00010000 (16) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00100000 (32) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10101000 (168) <-> ACC: 01011000 (88) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01010000 (80) <-> ACC: 10110001 (177) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10100001 (161) <-> ACC: 01100010 (98) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01000010 (66) <-> ACC: 11000101 (197) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10000101 (133) <-> ACC: 10001010 (138) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001011 (11) <-> ACC: 00010101 (21) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00010110 (22) <-> ACC: 00101010 (42) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00101100 (44) <-> ACC: 01010100 (84) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00101100 (44) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ',' to output_buffer
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11000010 (194) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10000100 (132) <-> ACC: 10000001 (129) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001001 (9) <-> ACC: 00000011 (3) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00010010 (18) <-> ACC: 00000110 (6) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100100 (36) <-> ACC: 00001100 (12) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001000 (72) <-> ACC: 00011000 (24) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10010000 (144) <-> ACC: 00110000 (48) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100000 (32) <-> ACC: 01100001 (97) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100000 (32) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '1', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer
+DEBUG: SLAVE DR: 01110010 (114) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11100100 (228) <-> ACC: 10010010 (146) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11001001 (201) <-> ACC: 00100101 (37) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10010010 (146) <-> ACC: 01001011 (75) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100100 (36) <-> ACC: 10010111 (151) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001001 (73) <-> ACC: 00101110 (46) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10010010 (146) <-> ACC: 01011100 (92) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100100 (36) <-> ACC: 10111001 (185) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001001 (73) <-> ACC: 01110010 (114) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01001001 (73) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'I' to output_buffer
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11000010 (194) <-> ACC: 11101100 (236) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10000101 (133) <-> ACC: 11011001 (217) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001011 (11) <-> ACC: 10110011 (179) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00010111 (23) <-> ACC: 01100110 (102) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00101110 (46) <-> ACC: 11001100 (204) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01011101 (93) <-> ACC: 10011000 (152) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10111011 (187) <-> ACC: 00110000 (48) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110110 (118) <-> ACC: 01100001 (97) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110110 (118) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '1', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'v' to output_buffer
+DEBUG: SLAVE DR: 01110011 (115) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11100110 (230) <-> ACC: 11000010 (194) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11001101 (205) <-> ACC: 10000101 (133) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10011011 (155) <-> ACC: 00001011 (11) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110110 (54) <-> ACC: 00010111 (23) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00101110 (46) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11011000 (216) <-> ACC: 01011100 (92) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10110000 (176) <-> ACC: 10111001 (185) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 01110011 (115) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '1', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'a' to output_buffer
+DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11011110 (222) <-> ACC: 11011100 (220) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10111101 (189) <-> ACC: 10111001 (185) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01111011 (123) <-> ACC: 01110011 (115) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11110110 (246) <-> ACC: 11100110 (230) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11101101 (237) <-> ACC: 11001101 (205) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11011011 (219) <-> ACC: 10011011 (155) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10110111 (183) <-> ACC: 00110111 (55) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101110 (110) <-> ACC: 01101111 (111) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101110 (110) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '1', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'n' to output_buffer
+DEBUG: SLAVE DR: 01110110 (118) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 11101100 (236) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11011000 (216) <-> ACC: 10000001 (129) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10110001 (177) <-> ACC: 00000011 (3) | PORTS: {0: 1, 1: '1', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100010 (98) <-> ACC: 00000111 (7) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 11000100 (196) <-> ACC: 00001110 (14) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 10001000 (136) <-> ACC: 00011101 (29) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00010000 (16) <-> ACC: 00111011 (59) | PORTS: {0: 1, 1: '1', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00100000 (32) <-> ACC: 01110110 (118) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 DEBUG: SLAVE DR: 00100000 (32) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
 INFO: Added symbol ' ' to output_buffer
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11101110 (238) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 11011100 (220) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 10111000 (184) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000111 (7) <-> ACC: 01110000 (112) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001110 (14) <-> ACC: 11100000 (224) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011101 (29) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00111011 (59) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01110111 (119) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01110111 (119) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 10101000 (168) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 01010000 (80) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000010 (2) <-> ACC: 10100000 (160) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000101 (5) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001010 (10) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00010101 (21) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00101010 (42) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01010100 (84) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01010100 (84) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
-INFO: Added symbol 'w' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Added symbol 'T' to output_buffer
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11011110 (222) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10111100 (188) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01111000 (120) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11110000 (240) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 11100000 (224) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110111 (55) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11000010 (194) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10000100 (132) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 00001000 (8) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 00010000 (16) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001100 (12) <-> ACC: 00100000 (32) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00011000 (24) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110000 (48) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
-INFO: Added symbol 'o' to output_buffer
+INFO: Added symbol 'a' to output_buffer
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11100100 (228) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
@@ -121,44 +199,57 @@ INFO: The transfer of the symbol is completed
 INFO: Added symbol 'r' to output_buffer
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11011000 (216) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10110000 (176) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01100000 (96) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110110 (54) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01101100 (108) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11000010 (194) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10000100 (132) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 00001000 (8) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 00010000 (16) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001100 (12) <-> ACC: 00100000 (32) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00011000 (24) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110000 (48) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01100001 (97) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: The transfer of the symbol is completed
-INFO: Added symbol 'l' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11001000 (200) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10010000 (144) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 00100000 (32) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001100 (12) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00011001 (25) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00110010 (50) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01100100 (100) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 01100100 (100) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-INFO: The transfer of the symbol is completed
-INFO: Added symbol 'd' to output_buffer
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-INFO: Start of character transmission
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 01000010 (66) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 10000100 (132) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 00001000 (8) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000010 (2) <-> ACC: 00010000 (16) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00000100 (4) <-> ACC: 00100000 (32) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00001000 (8) <-> ACC: 01000000 (64) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00010000 (16) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00100001 (33) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-DEBUG: SLAVE DR: 00100001 (33) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
-INFO: The transfer of the symbol is completed
-INFO: Added symbol '!' to output_buffer
+INFO: Added symbol 'a' to output_buffer
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11100110 (230) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 11001100 (204) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 10011000 (152) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000111 (7) <-> ACC: 00110000 (48) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001110 (14) <-> ACC: 01100000 (96) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00011100 (28) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00111001 (57) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110011 (115) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110011 (115) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 's' to output_buffer
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11011110 (222) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 10111100 (188) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 01111000 (120) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000110 (6) <-> ACC: 11110000 (240) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001101 (13) <-> ACC: 11100000 (224) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00011011 (27) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00110111 (55) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01101111 (111) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '1', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'o' to output_buffer
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: Start of character transmission
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 11101100 (236) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000001 (1) <-> ACC: 11011000 (216) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000011 (3) <-> ACC: 10110000 (176) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00000111 (7) <-> ACC: 01100000 (96) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00001110 (14) <-> ACC: 11000000 (192) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00011101 (29) <-> ACC: 10000000 (128) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 00111011 (59) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '1', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110110 (118) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+DEBUG: SLAVE DR: 01110110 (118) <-> ACC: 00000001 (1) | PORTS: {0: 0, 1: '0', 2: '0', 3: 1} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'v' to output_buffer
+DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 0, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 INFO: Start of character transmission
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
 DEBUG: SLAVE DR: 00000000 (0) <-> ACC: 00000000 (0) | PORTS: {0: 1, 1: '0', 2: '0', 3: 0} | PORTS_CONFIG: {0: [], 1: ['in'], 2: ['out'], 3: ['out']}
