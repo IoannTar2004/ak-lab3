@@ -454,7 +454,7 @@ DataPath и выполняющие инструкции процессора. К
 
 - устанавливаются по значению аккумулятора или после инструкции ```cmp```.
 - Флаг ```Z``` (zero) - устанавливается в 1, если в аккумуляторе 0 или результат cmp равен 0.
-- Флаг ```N``` (negative) - устанавливается в 1, если в аккумуляторе отрицательное число или результат cmp равен 
+- Флаг ```N``` (negative) - устанавливается в 1, если в аккумуляторе отрицательное число или результат cmp 
 \- отрицательный.
 
 В классе ```DataPath``` есть поле in_interrupt. Если это поле - true, то логгер добавляет информацию, что процессор 
@@ -476,7 +476,7 @@ DataPath и выполняющие инструкции процессора. К
 ```signal```.
 - Порт 0 отвечает за SCLK и при подаче положительного сигнала на этот порт происходит сдвиг влево на один бит.
 - Команды `in` и `out` отвечают за работу с буферами передачи.
-- Передача битов из аккумулятора в spi происходит из старшего байта аккумулятора[31:24]. Поэтому для переноса из младшего
+- Передача битов из аккумулятора по SPI происходит из старшего байта аккумулятора[31:24]. Поэтому для переноса из младшего
 байта в старший используется инструкция `movh`.
 
 
@@ -512,16 +512,17 @@ DataPath и выполняющие инструкции процессора. К
 - ```prob2.asm``` - [prob2_asm.yml](https://github.com/IoannTar2004/ak-lab3/blob/main/tests/prob2_asm.yml)
 
 Наиболее подробно разобран алгоритм ```hello_user_name```
-- Ввод: 
+- Ввод:
 
-   ```Ivan Tarasov```
+   `Ivan`
 
 - Вывод:
     ```
-  Hello, Ivan Tarasov
+  What is your name? 
+    Hello, Ivan! 
 
-  ticks_count: 8353
-  instructions_count: 3555
+    ticks_count: 13805
+    instructions_count: 6148
     ```
 - Файл с кодом - [hello_user_name.asm](https://github.com/IoannTar2004/ak-lab3/blob/main/algorithms/hello_user_name.asm)
 - Машинный код - [hello_user_name_machine.txt](https://github.com/IoannTar2004/ak-lab3/blob/main/machine/machine_instructions/hello_user_name_machine.txt)
@@ -542,7 +543,7 @@ DataPath и выполняющие инструкции процессора. К
 
 ```
 | ФИО | <алг> | <LoC> | <code инстр.> | <инстр.> | <такт.> | <вариант> |
-| Тарасов И.С. | hello | 62 | 52 | 2228 | 5205 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
-| Тарасов И.С. | cat | 41 | 32 | 1734 | 4051 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
-| Тарасов И.С. | hello_user_name | 76 | 56 | 3555 | 8353 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
+| Тарасов И.С. | hello | 62 | 52 | 2228 | 4997 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
+| Тарасов И.С. | cat | 41 | 32 | 1734 | 3891 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
+| Тарасов И.С. | hello_user_name | 128 | 105 | 6148 | 13805 | (asm | acc | harv | hw | tick | struct | trap | port | cstr | prob2 | spi) |
 ```

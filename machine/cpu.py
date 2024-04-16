@@ -121,6 +121,8 @@ class ControlUnit:
             self.instr_counter += 1
             decode = Decoder(self, self.instr["opcode"], self.instr["arg"] if "arg" in self.instr else 0)
             signal = Signal.NEXT_IP
+            if not self.data_path.ports.slave.input_tokens:
+                pass
 
             if decode.opcode in [Opcode.LOAD, Opcode.STORE]:
                 decode.decode_memory_commands()

@@ -19,9 +19,9 @@ class Logger:
 
     def skip_processor_information(self, tick):
         codes = {
-            "hello_machine.txt": tick == 159 or tick == 405,
-            "cat_machine.txt": tick == 162 or tick == 410,
-            "hello_user_name_machine.txt": tick == 188 or tick == 435,
+            "hello_machine.txt": tick == 153 or tick == 390,
+            "cat_machine.txt": tick == 154 or tick == 394,
+            "hello_user_name_machine.txt": tick in [182, 423, 8782],
             "prob2_machine.txt": tick == 118
         }
         if codes[self.code]:
@@ -29,9 +29,9 @@ class Logger:
 
     def skip_spi_information(self, tick):
         codes = {
-            "hello_machine.txt": tick == 824,
-            "cat_machine.txt": tick == 824,
-            "hello_user_name_machine.txt": tick == 878,
+            "hello_machine.txt": tick == 782,
+            "cat_machine.txt": tick == 792,
+            "hello_user_name_machine.txt": tick == 823 or tick == 9445,
             "prob2_machine.txt": False
         }
         if codes[self.code]:
@@ -41,16 +41,17 @@ class Logger:
         codes = {}
         if self.type == "processor":
             codes = {
-                "hello_machine.txt": tick <= 159 or 396 <= tick <= 405 or tick >= 5205,
-                "cat_machine.txt": tick <= 162 or 396 <= tick <= 410 or tick >= 4051,
-                "hello_user_name_machine.txt": tick <= 188 or 424 <= tick <= 435 or tick >= 8353,
+                "hello_machine.txt": tick <= 153 or 380 <= tick <= 390 or tick >= 4986,
+                "cat_machine.txt": tick <= 154 or 380 <= tick <= 394 or tick >= 3881,
+                "hello_user_name_machine.txt": tick <= 182 or 409 <= tick <= 423
+                                               or 8631 <= tick <= 8782 or tick >= 13787,
                 "prob2_machine.txt": tick <= 118 or 736 <= tick
             }
         elif self.type == "spi":
             codes = {
-                "hello_machine.txt": tick <= 824,
-                "cat_machine.txt": tick <= 824,
-                "hello_user_name_machine.txt": tick <= 878,
+                "hello_machine.txt": tick <= 782,
+                "cat_machine.txt": tick <= 792,
+                "hello_user_name_machine.txt": tick <= 823 or 9045 <= tick <= 9445,
                 "prob2_machine.txt": False
             }
         return codes[self.code]

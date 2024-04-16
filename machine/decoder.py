@@ -137,7 +137,6 @@ class Decoder:
                     self.cu.signal_latch_ip(Signal.DATA_IP)
             case Opcode.IRET:
                 Decoder(self.cu, Opcode.POP, 0).decode_stack_commands()
-                self.cu.tick()
 
                 ret()
                 self.cu.ei = True

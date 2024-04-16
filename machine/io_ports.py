@@ -60,7 +60,8 @@ class Slave:
         self.data_reg = 0
         self.output_buffer = []
         self.input_tokens = input_tokens
-        self.can_output = False
+        self.first_cs = True
+        self.can_remove_from_input = False
 
         self.ports = None
         self.log = None
@@ -68,6 +69,7 @@ class Slave:
     def add_input(self, tick):
         if len(self.input_tokens) > 0 and self.ports[CS] == 1 and tick >= self.input_tokens[0][0]:
             self.data_reg = ord(self.input_tokens[0][1])
+            self.can_remove_from_input = True
 
     def get_impulse(self):
         binary = bin(self.data_reg)[2:].zfill(8)
@@ -77,13 +79,14 @@ class Slave:
 
     def add_to_output_buffer(self):
         if self.ports[CS] == 1:
-            if not self.can_output:
-                self.can_output = True
+            if self.first_cs:
+                self.first_cs = False
             else:
                 self.log.info("The transfer of the symbol is completed")
                 if self.data_reg != 1:
                     self.output_buffer.append(chr(self.data_reg))
                     self.log.info(f"Added symbol '{chr(self.data_reg)}' to output_buffer")
-                if len(self.input_tokens) > 0:
+                if len(self.input_tokens) > 0 and self.can_remove_from_input:
                     self.input_tokens.pop(0)
+                    self.can_remove_from_input = False
                 self.data_reg = 0

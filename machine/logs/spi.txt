@@ -1,0 +1,252 @@
+DEBUG: TICK: 4 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
+DEBUG: TICK: 43 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+INFO: Start of character transmission
+DEBUG: TICK: 53 | SLAVE DR: 00000000 (0) <-> ACC: 01010111 | 00000000 (87 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 54 | SLAVE DR: 00000000 (0) <-> ACC: 01010111 | 00000000 (87 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 54 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 55 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 76 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 77 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 78 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 99 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 100 | SLAVE DR: 00000000 (0) <-> ACC: 10101110 | 00000000 (174 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 100 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 101 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 122 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 123 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 124 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 145 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 146 | SLAVE DR: 00000001 (1) <-> ACC: 01011100 | 00000000 (92 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 146 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 147 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 168 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 169 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 170 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 191 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 192 | SLAVE DR: 00000010 (2) <-> ACC: 10111000 | 00000000 (184 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 192 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 193 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 214 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 215 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 216 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 237 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 238 | SLAVE DR: 00000101 (5) <-> ACC: 01110000 | 00000000 (112 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 238 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 239 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 260 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 261 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 262 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 283 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 284 | SLAVE DR: 00001010 (10) <-> ACC: 11100000 | 00000000 (224 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 284 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 285 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 306 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 307 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 308 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 329 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 330 | SLAVE DR: 00010101 (21) <-> ACC: 11000000 | 00000000 (192 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 330 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 331 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 352 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 353 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 354 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 375 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 376 | SLAVE DR: 00101011 (43) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 376 | SLAVE DR: 01010111 (87) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 377 | SLAVE DR: 01010111 (87) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 398 | SLAVE DR: 01010111 (87) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 399 | SLAVE DR: 01010111 (87) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 400 | SLAVE DR: 01010111 (87) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 414 | SLAVE DR: 01010111 (87) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'W' to output_buffer
+DEBUG: TICK: 433 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+INFO: Start of character transmission
+DEBUG: TICK: 443 | SLAVE DR: 00000000 (0) <-> ACC: 01101000 | 00000000 (104 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 444 | SLAVE DR: 00000000 (0) <-> ACC: 01101000 | 00000000 (104 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 444 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 445 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 466 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 467 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 468 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 489 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 490 | SLAVE DR: 00000000 (0) <-> ACC: 11010000 | 00000000 (208 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 490 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 491 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 512 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 513 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 514 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 535 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 536 | SLAVE DR: 00000001 (1) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 536 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 537 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 558 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 559 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 560 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 581 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 582 | SLAVE DR: 00000011 (3) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 582 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 583 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 604 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 605 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 606 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 627 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 628 | SLAVE DR: 00000110 (6) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 628 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 629 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 650 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 651 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 652 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 673 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 674 | SLAVE DR: 00001101 (13) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 674 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 675 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 696 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 697 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 698 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 719 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 720 | SLAVE DR: 00011010 (26) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 720 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 721 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 742 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 743 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 744 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 765 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 766 | SLAVE DR: 00110100 (52) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 766 | SLAVE DR: 01101000 (104) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 767 | SLAVE DR: 01101000 (104) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 788 | SLAVE DR: 01101000 (104) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 789 | SLAVE DR: 01101000 (104) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 790 | SLAVE DR: 01101000 (104) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 804 | SLAVE DR: 01101000 (104) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'h' to output_buffer
+DEBUG: TICK: 823 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+WARNING: 
+... Continue! ...
+
+INFO: Start of character transmission
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'a' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 't' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'i' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 's' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'y' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'o' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'u' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'r' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'n' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'a' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'm' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'e' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol '?' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol '
+' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: The transfer of the symbol is completed
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'H' to output_buffer
+DEBUG: TICK: 9045 | SLAVE DR: 01100001 (97) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+INFO: Start of character transmission
+DEBUG: TICK: 9055 | SLAVE DR: 01100001 (97) <-> ACC: 01100101 | 00000000 (101 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9056 | SLAVE DR: 01100001 (97) <-> ACC: 01100101 | 00000000 (101 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9056 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9057 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9078 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9079 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9080 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9101 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9102 | SLAVE DR: 11000010 (194) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9102 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9103 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000001 (148 | 1) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9124 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000001 (148 | 1) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9125 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000001 (148 | 1) | PORTS: {0: 0, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9126 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000001 (148 | 1) | PORTS: {0: 0, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9147 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000001 (148 | 1) | PORTS: {0: 0, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9148 | SLAVE DR: 10000101 (133) <-> ACC: 10010100 | 00000001 (148 | 1) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9148 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000010 (40 | 2) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9149 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000011 (40 | 3) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9170 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000011 (40 | 3) | PORTS: {0: 1, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9171 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000011 (40 | 3) | PORTS: {0: 0, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9172 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000011 (40 | 3) | PORTS: {0: 0, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9193 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000011 (40 | 3) | PORTS: {0: 0, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9194 | SLAVE DR: 00001011 (11) <-> ACC: 00101000 | 00000011 (40 | 3) | PORTS: {0: 1, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9194 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9195 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9216 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9217 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9218 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9239 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9240 | SLAVE DR: 00010110 (22) <-> ACC: 01010000 | 00000110 (80 | 6) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9240 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9241 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9262 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9263 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9264 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9285 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9286 | SLAVE DR: 00101100 (44) <-> ACC: 10100000 | 00001100 (160 | 12) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9286 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9287 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9308 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9309 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9310 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9331 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9332 | SLAVE DR: 01011001 (89) <-> ACC: 01000000 | 00011000 (64 | 24) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9332 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9333 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+DEBUG: TICK: 9354 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9355 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9356 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9377 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9378 | SLAVE DR: 10110010 (178) <-> ACC: 10000000 | 00110000 (128 | 48) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+DEBUG: TICK: 9378 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 01100000 (0 | 96) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9379 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 01100001 (0 | 97) | PORTS: {0: 1, 1: 1, 2: 1, 3: 0}
+DEBUG: TICK: 9400 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 01100001 (0 | 97) | PORTS: {0: 1, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9401 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 01100001 (0 | 97) | PORTS: {0: 0, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9402 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 01100001 (0 | 97) | PORTS: {0: 0, 1: 1, 2: 0, 3: 0}
+DEBUG: TICK: 9416 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 1, 2: 0, 3: 1}
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'e' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'l' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'l' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'o' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ',' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'I' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'v' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'a' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol 'n' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol '!' to output_buffer
+INFO: The transfer of the symbol is completed
+INFO: Added symbol ' ' to output_buffer

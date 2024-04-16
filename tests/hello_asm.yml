@@ -121,7 +121,7 @@ machine_code: |-
 output: |
   Hello world!
 
-  ticks_count: 5205
+  ticks_count: 4997
   instructions_count: 2228
 
 out_processor: |
@@ -157,163 +157,170 @@ out_processor: |
   DEBUG: Interrupt! [4: iret ] - TICK: 28 | ACC: 2415919104 | BUF: 1207959552 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   DEBUG: Interrupt! [4: iret ] - TICK: 29 | ACC: 1207959552 | BUF: 1207959552 | STACK: -3 | ADDR: -3 | ALU_OUT: 1207959552 | MEM_OUT: 1207959552 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   DEBUG: Interrupt! [4: iret ] - TICK: 30 | ACC: 1207959552 | BUF: 1207959552 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 31 | ACC: 1207959552 | BUF: 1207959552 | STACK: -2 | ADDR: -3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 32 | ACC: 1207959552 | BUF: 1207959552 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 33 | ACC: 1207959552 | BUF: 1207959552 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 31 | ACC: 1207959552 | BUF: 1207959552 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 32 | ACC: 1207959552 | BUF: 1207959552 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   INFO: Return from interruption!
-  DEBUG: [4: iret ] - TICK: 34 | ACC: 1207959552 | BUF: 1207959552 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [12: load *3] - TICK: 35 | ACC: 16 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 16 | MEM_OUT: 16 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [13: dec ] - TICK: 36 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 15 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 37 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 15 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [4: iret ] - TICK: 33 | ACC: 1207959552 | BUF: 1207959552 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 34 | ACC: 16 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 16 | MEM_OUT: 16 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 35 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 15 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 36 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 15 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 37 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   DEBUG: [15: jne 11] - TICK: 38 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 39 | ACC: 15 | BUF: 1207959552 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [11: load *2] - TICK: 40 | ACC: 2415919104 | BUF: 1207959552 | STACK: -1 | ADDR: 2 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [11: load *2] - TICK: 39 | ACC: 2415919104 | BUF: 1207959552 | STACK: -1 | ADDR: 2 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   INFO: Interruption Request!
-  DEBUG: Interrupt! [11: load *2] - TICK: 41 | ACC: 2415919104 | BUF: 1207959552 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 42 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 43 | ACC: 12 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 44 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 45 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 46 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 47 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [0: out 2] - TICK: 48 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [1: sign 0] - TICK: 49 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [2: in 1] - TICK: 50 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [3: store *2] - TICK: 51 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 52 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 53 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 54 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 55 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 56 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 57 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 40 | ACC: 2415919104 | BUF: 1207959552 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 41 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 42 | ACC: 12 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 43 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 44 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 45 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 46 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [0: out 2] - TICK: 47 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [1: sign 0] - TICK: 48 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [2: in 1] - TICK: 49 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [3: store *2] - TICK: 50 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 51 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 52 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 53 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 54 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 55 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   INFO: Return from interruption!
-  DEBUG: [4: iret ] - TICK: 58 | ACC: 2415919104 | BUF: 2415919104 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [12: load *3] - TICK: 59 | ACC: 15 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 15 | MEM_OUT: 15 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [13: dec ] - TICK: 60 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 14 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 61 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 14 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 62 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 63 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [11: load *2] - TICK: 64 | ACC: 2415919104 | BUF: 2415919104 | STACK: -1 | ADDR: 2 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [4: iret ] - TICK: 56 | ACC: 2415919104 | BUF: 2415919104 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 57 | ACC: 15 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 15 | MEM_OUT: 15 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 58 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 14 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 59 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 14 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 60 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 61 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [11: load *2] - TICK: 62 | ACC: 2415919104 | BUF: 2415919104 | STACK: -1 | ADDR: 2 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   INFO: Interruption Request!
-  DEBUG: Interrupt! [11: load *2] - TICK: 65 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 63 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 64 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 65 | ACC: 12 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   DEBUG: Interrupt! [11: load *2] - TICK: 66 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 67 | ACC: 12 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 68 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 69 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 70 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 71 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [0: out 2] - TICK: 72 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [1: sign 0] - TICK: 73 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [2: in 1] - TICK: 74 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [3: store *2] - TICK: 75 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 76 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 77 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 78 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 79 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 80 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 81 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 67 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 68 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 69 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [0: out 2] - TICK: 70 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [1: sign 0] - TICK: 71 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [2: in 1] - TICK: 72 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [3: store *2] - TICK: 73 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 74 | ACC: 536870912 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 75 | ACC: 2415919104 | BUF: 2415919104 | STACK: -3 | ADDR: -3 | ALU_OUT: 2415919104 | MEM_OUT: 2415919104 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 76 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 77 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 78 | ACC: 2415919104 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   INFO: Return from interruption!
-  DEBUG: [4: iret ] - TICK: 82 | ACC: 2415919104 | BUF: 2415919104 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [12: load *3] - TICK: 83 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 14 | MEM_OUT: 14 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [13: dec ] - TICK: 84 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 13 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 85 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 13 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 86 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 87 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [11: load *2] - TICK: 88 | ACC: 536870912 | BUF: 2415919104 | STACK: -1 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [4: iret ] - TICK: 79 | ACC: 2415919104 | BUF: 2415919104 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 80 | ACC: 14 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 14 | MEM_OUT: 14 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 81 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 13 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 82 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 13 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 83 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 84 | ACC: 13 | BUF: 2415919104 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [11: load *2] - TICK: 85 | ACC: 536870912 | BUF: 2415919104 | STACK: -1 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   INFO: Interruption Request!
-  DEBUG: Interrupt! [11: load *2] - TICK: 89 | ACC: 536870912 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 90 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 91 | ACC: 12 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 92 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 93 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 94 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 95 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [0: out 2] - TICK: 96 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [1: sign 0] - TICK: 97 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [2: in 1] - TICK: 98 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [3: store *2] - TICK: 99 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 100 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 101 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 102 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 103 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 104 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 105 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 86 | ACC: 536870912 | BUF: 2415919104 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 87 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 88 | ACC: 12 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 89 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 90 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 91 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 92 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [0: out 2] - TICK: 93 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [1: sign 0] - TICK: 94 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [2: in 1] - TICK: 95 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [3: store *2] - TICK: 96 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 97 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 98 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 99 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 100 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 101 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   INFO: Return from interruption!
-  DEBUG: [4: iret ] - TICK: 106 | ACC: 536870912 | BUF: 536870912 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [12: load *3] - TICK: 107 | ACC: 13 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 13 | MEM_OUT: 13 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [13: dec ] - TICK: 108 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 109 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 110 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 111 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [11: load *2] - TICK: 112 | ACC: 536870912 | BUF: 536870912 | STACK: -1 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [4: iret ] - TICK: 102 | ACC: 536870912 | BUF: 536870912 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 103 | ACC: 13 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 13 | MEM_OUT: 13 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 104 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 105 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 106 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 107 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [11: load *2] - TICK: 108 | ACC: 536870912 | BUF: 536870912 | STACK: -1 | ADDR: 2 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   INFO: Interruption Request!
-  DEBUG: Interrupt! [11: load *2] - TICK: 113 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 114 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 115 | ACC: 12 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 116 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 117 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 118 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 119 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [0: out 2] - TICK: 120 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [1: sign 0] - TICK: 121 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [2: in 1] - TICK: 122 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [3: store *2] - TICK: 123 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: 2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 124 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 125 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 126 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 127 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 128 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 129 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 109 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 110 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 111 | ACC: 12 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 112 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 113 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 114 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 115 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [0: out 2] - TICK: 116 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [1: sign 0] - TICK: 117 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [2: in 1] - TICK: 118 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [3: store *2] - TICK: 119 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: 2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 120 | ACC: 1073741824 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 121 | ACC: 536870912 | BUF: 536870912 | STACK: -3 | ADDR: -3 | ALU_OUT: 536870912 | MEM_OUT: 536870912 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 122 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 123 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 124 | ACC: 536870912 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   INFO: Return from interruption!
-  DEBUG: [4: iret ] - TICK: 130 | ACC: 536870912 | BUF: 536870912 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [12: load *3] - TICK: 131 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [13: dec ] - TICK: 132 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 11 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 133 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 11 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 134 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 135 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [11: load *2] - TICK: 136 | ACC: 1073741824 | BUF: 536870912 | STACK: -1 | ADDR: 2 | ALU_OUT: 1073741824 | MEM_OUT: 1073741824 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [4: iret ] - TICK: 125 | ACC: 536870912 | BUF: 536870912 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 126 | ACC: 12 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 127 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 11 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 128 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 11 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 129 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 130 | ACC: 11 | BUF: 536870912 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [11: load *2] - TICK: 131 | ACC: 1073741824 | BUF: 536870912 | STACK: -1 | ADDR: 2 | ALU_OUT: 1073741824 | MEM_OUT: 1073741824 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   INFO: Interruption Request!
-  DEBUG: Interrupt! [11: load *2] - TICK: 137 | ACC: 1073741824 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 138 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 139 | ACC: 12 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 140 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 141 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 142 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [11: load *2] - TICK: 143 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [0: out 2] - TICK: 144 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [1: sign 0] - TICK: 145 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [2: in 1] - TICK: 146 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [3: store *2] - TICK: 147 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 148 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 149 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: 1073741824 | MEM_OUT: 1073741824 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 150 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 151 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 152 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: Interrupt! [4: iret ] - TICK: 153 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 132 | ACC: 1073741824 | BUF: 536870912 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 133 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 134 | ACC: 12 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 135 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 136 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 137 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [11: load *2] - TICK: 138 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [0: out 2] - TICK: 139 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [1: sign 0] - TICK: 140 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [2: in 1] - TICK: 141 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 0 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [3: store *2] - TICK: 142 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: 2 | ALU_OUT: 1073741824 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 143 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: -3 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 144 | ACC: 1073741824 | BUF: 1073741824 | STACK: -3 | ADDR: -3 | ALU_OUT: 1073741824 | MEM_OUT: 1073741824 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 145 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -3 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 146 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: -2 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: Interrupt! [4: iret ] - TICK: 147 | ACC: 1073741824 | BUF: 1073741824 | STACK: -2 | ADDR: -2 | ALU_OUT: 12 | MEM_OUT: 12 | FLAGS: {'z': False, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   INFO: Return from interruption!
-  DEBUG: [4: iret ] - TICK: 154 | ACC: 1073741824 | BUF: 1073741824 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [12: load *3] - TICK: 155 | ACC: 11 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 11 | MEM_OUT: 11 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [13: dec ] - TICK: 156 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 10 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 157 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 10 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 158 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 159 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [4: iret ] - TICK: 148 | ACC: 1073741824 | BUF: 1073741824 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 149 | ACC: 11 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 11 | MEM_OUT: 11 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 150 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 10 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 151 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 10 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 152 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 153 | ACC: 10 | BUF: 1073741824 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
   WARNING: 
   ... Continue! ...
   
-  DEBUG: [13: dec ] - TICK: 396 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [14: store *3] - TICK: 397 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 398 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [15: jne 11] - TICK: 399 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [16: di ] - TICK: 400 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [17: sign 3] - TICK: 401 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [18: ret ] - TICK: 402 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [18: ret ] - TICK: 403 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: 25 | MEM_OUT: 25 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [18: ret ] - TICK: 404 | ACC: 0 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
-  DEBUG: [26: load 101] - TICK: 405 | ACC: 101 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 380 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 381 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 382 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 383 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [16: di ] - TICK: 384 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [17: sign 3] - TICK: 385 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [18: ret ] - TICK: 386 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [18: ret ] - TICK: 387 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: 25 | MEM_OUT: 25 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [18: ret ] - TICK: 388 | ACC: 0 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [26: load 101] - TICK: 389 | ACC: 101 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [27: call 5] - TICK: 390 | ACC: 101 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
   WARNING: 
   ... Continue! ...
   
-  DEBUG: [50: halt ] - TICK: 5205 | ACC: 0 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  INFO: Return from interruption!
+  DEBUG: [4: iret ] - TICK: 4986 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -2 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [12: load *3] - TICK: 4987 | ACC: 1 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 1 | MEM_OUT: 1 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [13: dec ] - TICK: 4988 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': False, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [14: store *3] - TICK: 4989 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 4990 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [15: jne 11] - TICK: 4991 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: True | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [16: di ] - TICK: 4992 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [17: sign 3] - TICK: 4993 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: 3 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [18: ret ] - TICK: 4994 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: -1 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [18: ret ] - TICK: 4995 | ACC: 0 | BUF: 0 | STACK: -1 | ADDR: -1 | ALU_OUT: 49 | MEM_OUT: 49 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [18: ret ] - TICK: 4996 | ACC: 0 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
+  DEBUG: [50: halt ] - TICK: 4997 | ACC: 0 | BUF: 0 | STACK: 0 | ADDR: -1 | ALU_OUT: 0 | MEM_OUT: 0 | FLAGS: {'z': True, 'n': False} | EI: False | INT_ADDRESS: 0 | TIMER: 7
 
 out_spi: |
   DEBUG: TICK: 4 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
@@ -323,128 +330,127 @@ out_spi: |
   DEBUG: TICK: 25 | SLAVE DR: 00000000 (0) <-> ACC: 01001000 | 00000000 (72 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
   DEBUG: TICK: 25 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
   DEBUG: TICK: 26 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 48 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 47 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 48 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
   DEBUG: TICK: 49 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 50 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 72 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 73 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 73 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 74 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 96 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 97 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 98 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 120 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 121 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 121 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 122 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 144 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 145 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 146 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 168 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 169 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 169 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 170 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 192 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 193 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 194 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 216 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 217 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 217 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 218 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 240 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 241 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 242 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 264 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 265 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 265 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 266 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 288 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 289 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 290 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 312 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 313 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 313 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 314 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 336 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 337 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 338 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 360 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 361 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 361 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 362 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 384 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 385 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 386 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 401 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
+  DEBUG: TICK: 70 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 71 | SLAVE DR: 00000000 (0) <-> ACC: 10010000 | 00000000 (144 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 71 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 72 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 93 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 94 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 95 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 116 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 117 | SLAVE DR: 00000001 (1) <-> ACC: 00100000 | 00000000 (32 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 117 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 118 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 139 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 140 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 141 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 162 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 163 | SLAVE DR: 00000010 (2) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 163 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 164 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 185 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 186 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 187 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 208 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 209 | SLAVE DR: 00000100 (4) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 209 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 210 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 231 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 232 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 233 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 254 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 255 | SLAVE DR: 00001001 (9) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 255 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 256 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 277 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 278 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 279 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 300 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 301 | SLAVE DR: 00010010 (18) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 301 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 302 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 323 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 324 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 325 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 346 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 347 | SLAVE DR: 00100100 (36) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 347 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 348 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 369 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 370 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 371 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 385 | SLAVE DR: 01001000 (72) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
   INFO: The transfer of the symbol is completed
   INFO: Added symbol 'H' to output_buffer
-  DEBUG: TICK: 414 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 398 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
   INFO: Start of character transmission
-  DEBUG: TICK: 424 | SLAVE DR: 00000000 (0) <-> ACC: 01100101 | 00000000 (101 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 425 | SLAVE DR: 00000000 (0) <-> ACC: 01100101 | 00000000 (101 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 425 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 426 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 448 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 449 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 450 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 472 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 473 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 473 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 474 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 496 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 497 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 498 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 520 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 521 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 521 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 522 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 544 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 545 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 408 | SLAVE DR: 00000000 (0) <-> ACC: 01100101 | 00000000 (101 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 409 | SLAVE DR: 00000000 (0) <-> ACC: 01100101 | 00000000 (101 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 409 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 410 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 431 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 432 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 433 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 454 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 455 | SLAVE DR: 00000000 (0) <-> ACC: 11001010 | 00000000 (202 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 455 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 456 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 477 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 478 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 479 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 500 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 501 | SLAVE DR: 00000001 (1) <-> ACC: 10010100 | 00000000 (148 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 501 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 502 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 523 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 524 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 525 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
   DEBUG: TICK: 546 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 568 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 569 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 547 | SLAVE DR: 00000011 (3) <-> ACC: 00101000 | 00000000 (40 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 547 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 548 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
   DEBUG: TICK: 569 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 570 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 592 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 593 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 594 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 616 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 617 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 617 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 618 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 640 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 641 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 642 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 664 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 665 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 665 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 666 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 688 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 689 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 690 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 712 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 713 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 713 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 714 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 736 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 737 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 738 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 760 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 761 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 761 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 762 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
-  DEBUG: TICK: 784 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 785 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 786 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  DEBUG: TICK: 801 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
+  DEBUG: TICK: 570 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 571 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 592 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 593 | SLAVE DR: 00000110 (6) <-> ACC: 01010000 | 00000000 (80 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 593 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 594 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 615 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 616 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 617 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 638 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 639 | SLAVE DR: 00001100 (12) <-> ACC: 10100000 | 00000000 (160 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 639 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 640 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 661 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 662 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 663 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 684 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 685 | SLAVE DR: 00011001 (25) <-> ACC: 01000000 | 00000000 (64 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 685 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 686 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 707 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 708 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 709 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 730 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 0, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 731 | SLAVE DR: 00110010 (50) <-> ACC: 10000000 | 00000000 (128 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 731 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 732 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 1, 3: 0}
+  DEBUG: TICK: 753 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 1, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 754 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 755 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 769 | SLAVE DR: 01100101 (101) <-> ACC: 00000000 | 00000000 (0 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 1}
   INFO: The transfer of the symbol is completed
   INFO: Added symbol 'e' to output_buffer
-  DEBUG: TICK: 814 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
-  INFO: Start of character transmission
-  DEBUG: TICK: 824 | SLAVE DR: 00000000 (0) <-> ACC: 01101100 | 00000000 (108 | 0) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
+  DEBUG: TICK: 782 | SLAVE DR: 00000000 (0) <-> ACC: 00000000 | 00010000 (0 | 16) | PORTS: {0: 0, 1: 0, 2: 0, 3: 0}
   WARNING: 
   ... Continue! ...
   
+  INFO: Start of character transmission
   INFO: The transfer of the symbol is completed
   INFO: Added symbol 'l' to output_buffer
   INFO: The transfer of the symbol is completed
@@ -467,3 +473,4 @@ out_spi: |
   INFO: Added symbol '!' to output_buffer
   INFO: The transfer of the symbol is completed
   INFO: Added symbol ' ' to output_buffer
+

@@ -21,20 +21,34 @@ def start(code_file, machine, input_tokens, memory_capacity):
     return result
 
 
-def main(code_file, input_file):
-    input_tokens = []
-    time = 11
+def get_tokens(input_file):
     with open(input_file, "r", encoding="utf-8") as f:
         input_string = f.readline()
 
+    input_tokens = []
+    match os.path.basename(input_file):
+        case "cat.txt":
+            time = 11
+            offset = 100
+        case "hello_user_name.txt":
+            time = 8157
+            offset = 100
+        case _:
+            return []
+
     for char in input_string:
         input_tokens.append((time, char))
-        time += 10
+        time += offset
     input_tokens.append((time, "\x00"))
+    return input_tokens
+
+
+def main(code_file, input_file):
+    input_tokens = get_tokens(input_file)
 
     with open(code_file, "r", encoding="utf-8") as f:
         code = json.load(f)
-    out, instr_count, tick_count = start(os.path.basename(code_file), code, input_tokens, 40)
+    out, instr_count, tick_count = start(os.path.basename(code_file), code, input_tokens, 100)
 
     if len(out) > 0:
         print(f"{out}\n")
