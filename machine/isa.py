@@ -10,6 +10,7 @@ class Opcode:
     INC = "inc"
     DEC = "dec"
     CMP = "cmp"
+    MOVH = "movh"
 
     JMP = "jmp"
     JE = "je"
@@ -32,7 +33,6 @@ class Opcode:
 
     IN = "in"
     OUT = "out"
-    CLK = "clk"
     SIGN = "sign"
 
     HALT = "halt"

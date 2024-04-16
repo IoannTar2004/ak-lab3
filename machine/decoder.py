@@ -47,7 +47,7 @@ class Decoder:
 
     def decode_arithmetic_commands(self):
         dp = self.cu.data_path
-        if self.opcode not in [Opcode.INC, Opcode.DEC]:
+        if self.opcode not in [Opcode.INC, Opcode.DEC, Opcode.MOVH]:
             if isinstance(self.arg, int):
                 dp.alu_working()
                 dp.signal_latch_regs(Signal.BUF_LATCH)
@@ -76,6 +76,7 @@ class Decoder:
             Opcode.JE: dp.flags["z"],
             Opcode.JNE: not dp.flags["z"]
         }
+        self.cu.tick()
         signal = Signal.JMP_ARG if jumps[self.opcode] else Signal.NEXT_IP
         self.cu.tick()
         return signal
@@ -152,6 +153,7 @@ class Decoder:
                 self.cu.ei = True
             case Opcode.DI:
                 self.cu.ei = False
+                self.cu.timer.time = -2
             case Opcode.VECTOR:
                 dp = self.cu.data_path
                 dp.alu_working()
@@ -187,12 +189,9 @@ class Decoder:
 
     def decode_io_commands(self):
         dp = self.cu.data_path
+        dp.ports.tick = self.cu.get_ticks()
         if self.opcode in [Opcode.IN, Opcode.OUT]:
-            dp.ports.set_pin_mode(self.arg, self.opcode)
-        elif self.opcode == Opcode.CLK:
-            dp.ports.impulse(self.arg)
-            self.cu.tick()
-            dp.ports.impulse(self.arg)
-        elif self.opcode == Opcode.SIGN:
-            dp.ports.signal(self.arg)
+            dp.ports.io_buffer_manager(self.opcode, self.arg)
+        else:
+            dp.ports.inverse_signal(self.arg)
         self.cu.tick()

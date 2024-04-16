@@ -8,7 +8,7 @@ from machine.io_ports import Ports, Slave
 
 def start(code_file, machine, input_tokens, memory_capacity):
     slave = Slave(input_tokens)
-    ports = Ports(slave)
+    ports = Ports(slave, code_file)
     dp = DataPath(memory_capacity, ports)
     ports.data_path = dp
     cu = ControlUnit(code_file, machine, dp)
@@ -34,7 +34,7 @@ def main(code_file, input_file):
 
     with open(code_file, "r", encoding="utf-8") as f:
         code = json.load(f)
-    out, instr_count, tick_count = start(os.path.basename(code_file), code, input_tokens, 30)
+    out, instr_count, tick_count = start(os.path.basename(code_file), code, input_tokens, 40)
 
     if len(out) > 0:
         print(f"{out}\n")

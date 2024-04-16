@@ -3,7 +3,9 @@ from machine.machine_signals import Signal, Valves
 from machine.isa import Opcode
 from machine.logger import Logger
 
-arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL, Opcode.DIV, Opcode.REM, Opcode.INC, Opcode.DEC, Opcode.CMP]
+arithmetic_operations = [Opcode.ADD, Opcode.SUB, Opcode.MUL,
+                         Opcode.DIV, Opcode.REM, Opcode.INC,
+                         Opcode.DEC, Opcode.CMP, Opcode.MOVH]
 
 
 class DataPath:
@@ -57,6 +59,8 @@ class DataPath:
             case Opcode.CMP:
                 self.flags = {"z": self.alu_out == value, "n": self.alu_out < value}
                 return self.alu_out
+            case Opcode.MOVH:
+                return self.alu_out << 24
 
     def get_bus_value(self, bus):
         match bus:
@@ -73,7 +77,7 @@ class DataPath:
         self.alu_out = self.get_bus_value(valves[0])
         if Valves.ACC in valves:
             self.flags = {"z": self.acc == 0, "n": self.alu_out < 0}
-        if operation in [Opcode.INC, Opcode.DEC]:
+        if operation in [Opcode.INC, Opcode.DEC, Opcode.MOVH]:
             self.alu_out = self.execute_alu_operation(operation)
         elif len(valves) > 1:
             self.alu_out = self.execute_alu_operation(operation, self.get_bus_value(valves[1]))
@@ -88,7 +92,7 @@ class ControlUnit:
         self.instructions = instructions
         self.data_path = data_path
         self.timer = self.Timer()
-        self.log = Logger("logs/processor.txt", code_file)
+        self.log = Logger(code_file, "processor")
         self._tick = 0
         self.int_vector = 0
         self.instr_counter = 0
@@ -130,7 +134,7 @@ class ControlUnit:
                 decode.decode_interrupt_commands()
             elif decode.opcode in [Opcode.PUSH, Opcode.POP]:
                 decode.decode_stack_commands()
-            elif decode.opcode in [Opcode.IN, Opcode.OUT, Opcode.CLK, Opcode.SIGN]:
+            elif decode.opcode in [Opcode.IN, Opcode.OUT, Opcode.SIGN]:
                 decode.decode_io_commands()
 
             if self.instr["opcode"] not in [Opcode.CALL, Opcode.IRET]:
@@ -163,6 +167,6 @@ class ControlUnit:
                f" | TIMER: {self.timer.timer_delay}"
 
     class Timer:
-        time = 0
-
-        timer_delay = 0
+        def __init__(self):
+            self.time = -2
+            self.timer_delay = 0
