@@ -29,15 +29,15 @@ def test_golden(golden):
             simulation.main(target, input_stream)
             out = stdout.getvalue().replace("\x00", "")
             assert out == golden["output"]
-        #
-        # with open(target, "r", encoding="utf-8") as file:
-        #     code = file.read()
-        # assert code == golden["machine_code"]
 
-        # with open("machine/logs/processor.txt") as file:
-        #     proc_log = file.read()
-        #     assert proc_log == golden.out["out_processor"]
-        #
-        # with open("machine/logs/spi.txt") as file:
-        #     spi_log = file.read().replace("\x00", " ")
-        #     assert spi_log == golden.out["out_spi"]
+        with open(target, "r", encoding="utf-8") as file:
+            code = file.read()
+        assert code == golden["machine_code"]
+
+        with open("machine/logs/processor.txt") as file:
+            proc_log = file.read()
+            assert proc_log == golden.out["out_processor"]
+
+        with open("machine/logs/spi.txt") as file:
+            spi_log = file.read().replace("\x00", " ")
+            assert spi_log == golden.out["out_spi"]
