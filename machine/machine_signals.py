@@ -15,7 +15,7 @@ class Signal:
     DATA_IP = "data ip"
 
 
-class Valves:
+class Operands:
     ACC = "acc"
     MEM = "mem"
     BUF = "buf"

@@ -1,5 +1,5 @@
 from machine.decoder import Decoder
-from machine.machine_signals import Signal, Valves
+from machine.machine_signals import Signal, Operands
 from machine.isa import Opcode
 from machine.logger import Logger
 
@@ -64,18 +64,18 @@ class DataPath:
 
     def get_bus_value(self, bus):
         match bus:
-            case Valves.ACC:
+            case Operands.ACC:
                 return self.acc
-            case Valves.BUF:
+            case Operands.BUF:
                 return self.buf_reg
-            case Valves.STACK:
+            case Operands.STACK:
                 return self.stack_pointer
-            case Valves.MEM:
+            case Operands.MEM:
                 return self.memory_out
 
-    def alu_working(self, operation=Opcode.ADD, valves=[Valves.ACC]):
+    def alu_working(self, operation=Opcode.ADD, valves=[Operands.ACC]):
         self.alu_out = self.get_bus_value(valves[0])
-        if Valves.ACC in valves:
+        if Operands.ACC in valves:
             self.flags = {"z": self.acc == 0, "n": self.alu_out < 0}
         if operation in [Opcode.INC, Opcode.DEC, Opcode.MOVH]:
             self.alu_out = self.execute_alu_operation(operation)

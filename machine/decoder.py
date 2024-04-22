@@ -1,5 +1,5 @@
 from machine.isa import Opcode
-from machine.machine_signals import Signal, Valves
+from machine.machine_signals import Signal, Operands
 import re
 
 
@@ -16,15 +16,15 @@ class Decoder:
         count = self.arg.count('*') - 1
         for i in range(count):
             dp.memory_manager(Signal.READ)
-            dp.alu_working(valves=[Valves.MEM])
+            dp.alu_working(valves=[Operands.MEM])
             dp.signal_latch_regs(Signal.BUF_LATCH)
             self.cu.tick()
             if self.arg[-1] == '+' and i == 0:
-                dp.alu_working(Opcode.INC, [Valves.BUF])
+                dp.alu_working(Opcode.INC, [Operands.BUF])
                 dp.memory_manager(Signal.WRITE)
                 self.cu.tick()
 
-            dp.alu_working(valves=[Valves.BUF])
+            dp.alu_working(valves=[Operands.BUF])
             self.cu.data_path.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
             self.cu.tick()
 
@@ -36,7 +36,7 @@ class Decoder:
             else:
                 self.process_addressing()
                 dp.memory_manager(Signal.READ)
-                dp.alu_working(valves=[Valves.MEM])
+                dp.alu_working(valves=[Operands.MEM])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
 
         elif self.opcode == Opcode.STORE:
@@ -56,12 +56,12 @@ class Decoder:
                 dp.signal_latch_acc(Signal.DIRECT_ACC_LOAD, self.arg)
                 self.cu.tick()
 
-                dp.alu_working(self.opcode, [Valves.BUF, Valves.ACC])
+                dp.alu_working(self.opcode, [Operands.BUF, Operands.ACC])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
             else:
                 self.process_addressing()
                 dp.memory_manager(Signal.READ)
-                dp.alu_working(self.opcode, [Valves.ACC, Valves.MEM])
+                dp.alu_working(self.opcode, [Operands.ACC, Operands.MEM])
                 dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
         else:
             dp.alu_working(self.opcode)
@@ -85,7 +85,7 @@ class Decoder:
         dp = self.cu.data_path
 
         def subprogram():
-            dp.alu_working(Opcode.DEC, [Valves.STACK])
+            dp.alu_working(Opcode.DEC, [Operands.STACK])
             dp.signal_latch_regs(Signal.STACK_LATCH)
             dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
             self.cu.tick()
@@ -99,20 +99,20 @@ class Decoder:
             dp.memory_manager(Signal.WRITE)
             self.cu.tick()
 
-            dp.alu_working(valves=[Valves.BUF])
+            dp.alu_working(valves=[Operands.BUF])
             dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
 
         def ret():
-            dp.alu_working(valves=[Valves.STACK])
+            dp.alu_working(valves=[Operands.STACK])
             dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
             self.cu.tick()
 
             dp.memory_manager(Signal.READ)
-            dp.alu_working(valves=[Valves.MEM])
+            dp.alu_working(valves=[Operands.MEM])
             self.cu.signal_latch_ip(Signal.DATA_IP)
             self.cu.tick()
 
-            dp.alu_working(Opcode.INC, [Valves.STACK])
+            dp.alu_working(Opcode.INC, [Operands.STACK])
             dp.signal_latch_regs(Signal.STACK_LATCH)
 
         match self.opcode:
@@ -133,7 +133,7 @@ class Decoder:
 
                     dp.signal_latch_address(Signal.DIRECT_ADDRESS_LOAD, self.cu.int_vector)
                     dp.memory_manager(Signal.READ)
-                    dp.alu_working(valves=[Valves.MEM])
+                    dp.alu_working(valves=[Operands.MEM])
                     self.cu.signal_latch_ip(Signal.DATA_IP)
             case Opcode.IRET:
                 Decoder(self.cu, Opcode.POP, 0).decode_stack_commands()
@@ -164,7 +164,7 @@ class Decoder:
     def decode_stack_commands(self):
         dp = self.cu.data_path
         if self.opcode == Opcode.PUSH:
-            dp.alu_working(Opcode.DEC, [Valves.STACK])
+            dp.alu_working(Opcode.DEC, [Operands.STACK])
             dp.signal_latch_regs(Signal.STACK_LATCH)
             dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
             self.cu.tick()
@@ -173,16 +173,16 @@ class Decoder:
             dp.memory_manager(Signal.WRITE)
 
         else:
-            dp.alu_working(valves=[Valves.STACK])
+            dp.alu_working(valves=[Operands.STACK])
             dp.signal_latch_address(Signal.DATA_ADDRESS_LOAD)
             self.cu.tick()
 
             dp.memory_manager(Signal.READ)
-            dp.alu_working(valves=[Valves.MEM])
+            dp.alu_working(valves=[Operands.MEM])
             dp.signal_latch_acc(Signal.DATA_ACC_LOAD)
             self.cu.tick()
 
-            dp.alu_working(Opcode.INC, [Valves.STACK])
+            dp.alu_working(Opcode.INC, [Operands.STACK])
             dp.signal_latch_regs(Signal.STACK_LATCH)
         self.cu.tick()
 
