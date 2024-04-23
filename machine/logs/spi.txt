@@ -159,7 +159,11 @@ INFO: Added symbol 'e' to output_buffer
 INFO: The transfer of the symbol is completed
 INFO: Added symbol '?' to output_buffer
 INFO: The transfer of the symbol is completed
+<<<<<<< HEAD
 INFO: Added symbol ' ' to output_buffer
+=======
+INFO: Added symbol ' ' to output_buffer
+>>>>>>> dfc07f7d10fc95ea1d80ce45d3419ceef30fdd8c
 INFO: The transfer of the symbol is completed
 INFO: Added symbol '
 ' to output_buffer
@@ -249,4 +253,8 @@ INFO: Added symbol 'n' to output_buffer
 INFO: The transfer of the symbol is completed
 INFO: Added symbol '!' to output_buffer
 INFO: The transfer of the symbol is completed
+<<<<<<< HEAD
 INFO: Added symbol ' ' to output_buffer
+=======
+INFO: Added symbol ' ' to output_buffer
+>>>>>>> dfc07f7d10fc95ea1d80ce45d3419ceef30fdd8c
