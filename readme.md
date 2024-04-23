@@ -297,7 +297,7 @@ label:
 | func                        |       1       | L -> ACC                                                         |
 | переход на прерывание (isr) |       7       | EI = 0, SP = SP - 1, IP -> *SP, SP = SP - 1, ACC -> *SP, L -> IP |
 | ret                         |       3       | *SP -> IP, SP = SP + 1                                           |
-| iret                        |       7       | *SP -> ACC, SP = SP + 1, *SP -> IP, SP = SP + 1, EI = 1          |
+| iret                        |       6       | *SP -> ACC, SP = SP + 1, *SP -> IP, SP = SP + 1, EI = 1          |
 
 **Инструкции настройки прерываний:**
 
