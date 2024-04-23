@@ -27,14 +27,12 @@ def get_tokens(input_file):
 
     input_tokens = []
     match os.path.basename(input_file):
-        case "cat.txt":
-            time = 11
-            offset = 100
         case "hello_user_name.txt":
             time = 8157
             offset = 100
         case _:
-            return []
+            time = 11
+            offset = 100
 
     for char in input_string:
         input_tokens.append((time, char))
